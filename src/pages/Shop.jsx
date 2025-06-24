@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Shop() {
   return (
-    <div>Shop</div>
+    <>
+      <h1>Shop</h1>
+    </>
   )
 }
