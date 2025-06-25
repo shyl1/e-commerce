@@ -8,7 +8,7 @@
   --color-primary: rgba(243, 244, 247, 1);
   --color-secondary: rgba(113, 119, 142, 1);
   --color-hover: rgba(240, 250, 255, 1);
-  --color-text-gray: rgba(155, 155, 180, 1);
+  --color-text-gray: #edeef5;
 
   /* Fonts */
   --font-heading: "Inter", sans-serif;
