@@ -4,11 +4,13 @@
   
   /* Color */
   --color-accent: rgba(53, 175, 160, 1);
-  --color-text: rgba(62, 68, 90, 1);
+  --color-text: #3e445a;
   --color-primary: rgba(243, 244, 247, 1);
   --color-secondary: rgba(113, 119, 142, 1);
   --color-hover: rgba(240, 250, 255, 1);
-  --color-text-gray: #edeef5;
+  --color-border-gray: #edeef5;
+  --color-bg:#fff1ee;
+  --color-text-holder:rgba(149, 149, 169, 1);
 
   /* Fonts */
   --font-heading: "Inter", sans-serif;
@@ -19,6 +21,6 @@
 
 /* Plain CSS*/
 .container {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: auto;
 }

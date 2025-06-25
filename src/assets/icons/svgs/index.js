@@ -1,7 +1,7 @@
 import Avatar from "./avatar.svg?react";
 import Cart from "./cart.svg?react";
 import Menu from "./menu.svg?react";
-import Search from './search.svg?react';
+import SearchIcon from './search.svg?react';
 import ArrowDown from './down-arrow.svg?react';
 import Meat from "./meat.svg?react";
 import Bakery from './bakery.svg?react';
@@ -36,7 +36,7 @@ export {
   Avatar,
   Cart,
   Menu,
-  Search,
+  SearchIcon,
   ArrowDown,
   Meat,
   Bakery,
