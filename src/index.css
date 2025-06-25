@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme {
+  
+  /* Color */
+  --color-accent: rgba(53, 175, 160, 1);
+  --color-text: rgba(62, 68, 90, 1);
+  --color-primary: rgba(243, 244, 247, 1);
+  --color-secondary: rgba(113, 119, 142, 1);
+  --color-hover: rgba(240, 250, 255, 1);
+  --color-text-gray: rgba(155, 155, 180, 1);
+
+  /* Fonts */
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Dosis", sans-serif;
+
+}
+
+
+/* Plain CSS*/
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
