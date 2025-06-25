@@ -27,6 +27,7 @@ import Share from './share.svg?react';
 import Tag from './tag.svg?react';
 import Viewed from './viewed.svg?react';
 import Wishlist from './wishlist.svg?react';
+import DropDown from './drop.svg?react';
 
 
 
@@ -62,4 +63,5 @@ export {
   Tag,
   Viewed,
   Wishlist,
+  DropDown,
 }

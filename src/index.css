@@ -8,8 +8,9 @@
   --color-primary: rgba(243, 244, 247, 1);
   --color-secondary: rgba(113, 119, 142, 1);
   --color-hover: rgba(240, 250, 255, 1);
-  --color-border-gray: #edeef5;
+  --color-border-gray: rgba(237, 238, 245, 1);
   --color-bg:#fff1ee;
+  --color-text-menu:rgba(113, 119, 142, 1);
   --color-text-holder:rgba(149, 149, 169, 1);
 
   /* Fonts */
