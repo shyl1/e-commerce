@@ -1,4 +1,4 @@
-import { ArrowDown, Secure } from "@/assets/icons/svgs";
+import { ArrowDown, DropDown, Secure } from "@/assets/icons/svgs";
 import { Link } from "react-router-dom";
 
 
@@ -18,10 +18,10 @@ export default function Bio() {
       </div>
       <div className="flex items-center justify-between gap-3 font-heading text-xs h-full ">
           <span className="hidden lg:flex items-center justify-center"><Secure className="w-[20px] h-[20px] mr-2"/>100% Secure delivery without contacting the courier</span>
-          <span className="hidden lg:flex border-x border-[var(--color-border-gray)] px-1 ">Need help? Call Us: <span className="text-accent font-bold">+ 0020 500</span></span>
+          <span className="hidden lg:flex border-x border-[var(--color-border-gray)] px-5 ">Need help? Call Us: <span className="text-accent font-bold">+ 0020 500</span></span>
         <div className="flex  gap-2 font-medium">
-          <span className="flex justify-center items-center gap-2 ">English <ArrowDown className="cursor-pointer"/> </span>
-          <span className="flex justify-center items-center gap-2 ">USD <ArrowDown className="cursor-pointer"/> </span>
+          <span className="flex justify-center items-center gap-2 ">English<span className="text-[var(--color-text)]"><DropDown/></span></span>
+          <span className="flex justify-center items-center gap-2 ">USD<span className="text-[var(--color-text)]"><DropDown/></span></span>
         </div>
       </div>
 

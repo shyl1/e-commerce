@@ -4,7 +4,7 @@
   
   /* Color */
   --color-accent: rgba(53, 175, 160, 1);
-  --color-text: #3e445a;
+  --color-text: rgba(62, 68, 90, 1);
   --color-primary: rgba(243, 244, 247, 1);
   --color-secondary: rgba(113, 119, 142, 1);
   --color-hover: rgba(240, 250, 255, 1);
@@ -12,6 +12,7 @@
   --color-bg:#fff1ee;
   --color-text-menu:rgba(113, 119, 142, 1);
   --color-text-holder:rgba(149, 149, 169, 1);
+  --color-text-white: rgba(255, 255, 255, 1);
 
   /* Fonts */
   --font-heading: "Inter", sans-serif;
@@ -19,6 +20,13 @@
 
 }
 
+.centering{
+  @apply  flex justify-center items-center;
+}
+
+.isActiveStyle {
+  @apply text-[var(--color-accent)] bg-hover w-[96px] h-[40px] rounded-[40px];
+}
 
 /* Plain CSS*/
 .container {
