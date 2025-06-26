@@ -10,6 +10,7 @@ import Blog2 from './blog2.png';
 import CategoryImage from './category-image.png';
 import Man from './man.png';
 import Payments from './payments.jpg';
+import Coupon from './coupon.png';
 
 
 export {
@@ -25,4 +26,5 @@ export {
   CategoryImage,
   Man,
   Payments,
+  Coupon,
 }
