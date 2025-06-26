@@ -2,7 +2,7 @@ import React from "react";
 
 const CardCategory = ({ name, src, discount }) => {
   return (
-    <div className=" relative bg-white p-4  h-full border-2 border-gray-200 flex flex-col justify-between ">
+    <div className=" relative  p-4  h-full flex flex-col justify-between border-2 border-gray-200 ">
       <div>
         <img className="w-full h-full object-cover" src={src} alt={name} />
         {discount && (
@@ -26,7 +26,7 @@ const CardCategory = ({ name, src, discount }) => {
         </div>
       </div>
       <div className="flex justify-center mt-3">
-        <button className="w-full text-[0.6rem] md:text-sm text-[#35AFA0] border-2 border-[#35AFA0] px-2 sm:px-4 py-2 rounded-full hover:bg-[#35AFA0] hover:text-white transition-all duration-300 hover:scale-105 hover: ">
+        <button className="w-full text-[0.6rem] md:text-sm text-[#35AFA0] border-2 border-[#35AFA0] px-2 sm:px-4 py-2 rounded-full hover:cursor-pointer hover:bg-[#35AFA0] hover:text-white transition-all duration-300 hover:scale-105 hover: ">
           Add to Cart
         </button>
       </div>
