@@ -12,14 +12,13 @@ const DiscountCard = () => {
         .
       </h1>
       <button
-        className=" text-[#FF4D4F] px-4 py-1 rounded-full font-bold  border-1 border-dashed border-[#FF4D4F] hover:bg-[#FF4D4F] hover:text-white transition-all duration-300 hover:scale-105 hover:cursor-pointer "
+        className="text-[#FF4D4F] px-4 py-1 rounded-full font-bold border-1 border-dashed border-[#FF4D4F] hover:bg-[#FF4D4F] hover:text-white transition-all duration-300 hover:scale-105 hover:cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {isHovered ? "Copy" : "FREE25BAC"}
-        
       </button>
-      <h5 className="text-[0.6rem] text-[#9B9BB4] ">
+      <h5 className="text-[0.6rem] text-[#9B9BB4]">
         Use discount code in checkout!
       </h5>
     </div>
