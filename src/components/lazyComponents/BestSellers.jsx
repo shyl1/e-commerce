@@ -61,7 +61,7 @@ function BestSellers() {
 
   return (
     <div>
-      <div className=" mx-auto max-w-1xl py-5 sm:max-w-lg md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl ">
+      <div className=" mx-auto  py-5 sm:max-w-lg md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl ">
         <div className="flex justify-between">
           <div>
             <h3 className="font-semibold leading-3">Best Sellers</h3>
@@ -71,10 +71,10 @@ function BestSellers() {
           </div>
           <button
             type="botton"
-            className="flex justify-center items-center w-25 h-7 text-xs rounded-full border border-gray-300 text-gray-400"
+            className="flex justify-center items-center w-25 h-7 text-xs rounded-full border border-gray-300 text-gray-400 cursor-pointer"
           >
             {" "}
-            View All <HiArrowNarrowRight className="text-lg ml-3" />{/** all product*/}
+            View All <HiArrowNarrowRight className="text-lg ml-3" />{/**------------link all product----------*/}
           </button>
         </div>
 
@@ -89,7 +89,6 @@ function BestSellers() {
                 <img
                   src={e.image}
                   alt="#"
-                  loading="lazy"
                   className="w-fall h-1/1 object-cover"
                 />
               </div>
@@ -113,26 +112,25 @@ function BestSellers() {
                 <p>${e.price}</p>
               </div>
               <div className="w-full flex  justify-center mt-3  ">
-                <button
+                <button                                                      
                   type="botton"
-                  className="w-44 h-10 rounded-full"
+                  className="w-48 h-8 rounded-full cursor-pointer"
                   style={{ backgroundColor: "#FFCD00" }}
                 >
-                  {" "}
-                  Add to cart
+                  Add to cart                                {/**--------------link Add to cart-------------*/}
                 </button>
               </div>
             </div>
           ))}
         </Slider>
-        <div className="flex justify-around items-center bg-red-50 h-20 mt-10 md:flex-wrap sm:flex-wrap">
-          <p className="text-green-600 font-semibold text-xl ">
+        <div className="flex justify-around items-center bg-red-50 mt-10  ">
+          <p className= " sm:text-green-600 font-semibold text-xl  text-green-600  ">
             100% Secure delivery without contacting the courier
           </p>
           <img src={AD5} alt="#" className="object-cover h-20 w-80 " />
           <button
             type="botton"
-            className=" w-25 h-7 text-xs rounded-full bg-green-600 text-white"
+            className=" w-25 h-7 text-xs rounded-full bg-green-600 text-white cursor-pointer"
           >
             Shop Now
           </button>
