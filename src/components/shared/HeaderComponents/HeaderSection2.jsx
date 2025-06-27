@@ -7,7 +7,7 @@ const totalProducts = 50;
 
 export default function HeaderSection2() {
   return (
-    <header className="container lg:h-[88px] h-[70px] mt-0 flex justify-between items-center">
+    <header className="container lg:h-[88px] h-[70px] mt-0 flex justify-between items-center bg-white ">
       <div>
         <DropMenu totalProducts={totalProducts}/>
       </div>

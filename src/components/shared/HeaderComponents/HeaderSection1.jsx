@@ -7,7 +7,7 @@ import CartWidget from './CartWidget'
 const productsCount = 0; // This should be replaced with actual logic to get the count of products in the cart
 export default function HeaderSection1() {
   return (
-    <header className='container flex items-center justify-between lg:h-[92px] h-[60px] sm:h-[80px] select-none max-lg:px-2'>
+    <header className='container flex items-center justify-between lg:h-[92px] h-[60px] sm:h-[80px] select-none max-lg:px-2 bg-white '>
       <div className='flex items-center'>
         <img src={Logo} alt="Basket Logo"  className='lg:w-[165px] lg:h-[62px] min-w-[90px] h-[40px]'/>
       </div>
