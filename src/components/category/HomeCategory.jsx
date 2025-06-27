@@ -52,7 +52,7 @@ const HomeCategory = () => {
             The freshest green grocer products are waiting for you
           </div>
         </div>
-        
+
         <div className="flex w-full sm:w-auto mt-2 justify-center items-center text-center overflow-hidden border-2 border-gray-200 rounded-full px-4 py-1 hover:text-gray-600 transition-all duration-300 hover:scale-105 hover:cursor-pointer">
           <button
             onClick={() => console.log("Clicked")}
@@ -71,10 +71,8 @@ const HomeCategory = () => {
       {/* Main Content Section */}
       <div className="border-2 border-gray-200 rounded-lg">
         <div className="w-full flex flex-col md:flex-row md:h-full rounded-lg">
-          
           {/* Left Side - Banner and Categories List */}
           <div className="w-full md:w-[30%] flex flex-col h-auto">
-            
             {/* Banner Section */}
             <div className="relative flex-1">
               <img
