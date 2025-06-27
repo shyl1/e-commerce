@@ -1,5 +1,6 @@
 import HeroSection from '@/components/HomeComponents/HeroSection'
 import HomeCategory from "@/components/category/HomeCategory";
+import BestSellers from '@/components/lazyComponents/BestSellers'
 import React from "react";
 
 
@@ -10,6 +11,10 @@ export default function Home() {
       <div>
       <HomeCategory />
     </div>
+    <div>
+      <BestSellers/>
+    </div>
     </section>
   )
 }
+
