@@ -1,7 +1,11 @@
-import React from 'react'
+import HomeCategory from "@/components/category/HomeCategory";
+import React from "react";
+
 
 export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <div>
+      <HomeCategory />
+    </div>
+  );
 }

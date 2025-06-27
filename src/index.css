@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+/* From Uiverse.io by SelfMadeSystem */
+.containerCART {
+  cursor: pointer;
+}
+
+.containerCART input {
+  display: none;
+}
+
+.containerCART svg {
+  overflow: visible;
+}
+
+.pathCART {
+  fill: none;
+  stroke: rgb(150, 150, 150);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+
+.containerCART input:checked ~ svg .pathCART {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+}
