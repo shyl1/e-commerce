@@ -10,8 +10,10 @@ import Blog2 from './blog2.png';
 import CategoryImage from './category-image.png';
 import Man from './man.png';
 import Payments from './payments.jpg';
+import Coupon from './coupon.png';
 import AD5 from './ad5.png';
 import AD6 from './ad6.png';
+
 
 export {
   AD1,
@@ -28,4 +30,5 @@ export {
   CategoryImage,
   Man,
   Payments,
+  Coupon,
 }
