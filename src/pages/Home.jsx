@@ -1,11 +1,17 @@
+import HeroSection from '@/components/HomeComponents/HeroSection'
 import HomeCategory from "@/components/category/HomeCategory";
 import React from "react";
 
 
 export default function Home() {
   return (
-    <div>
+    <section className='my-5'>
+      <HeroSection />
+      <div>
       <HomeCategory />
     </div>
-  );
+    </section>
+
+
+  )
 }

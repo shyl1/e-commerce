@@ -1,5 +1,48 @@
 @import "tailwindcss";
 
+@theme {
+  
+  /* Color */
+  --color-accent: rgba(53, 175, 160, 1);
+  --color-text: rgba(62, 68, 90, 1);
+  --color-primary: rgba(243, 244, 247, 1);
+  --color-secondary: rgba(113, 119, 142, 1);
+  --color-hover: rgba(240, 250, 255, 1);
+  --color-border-gray: rgba(237, 238, 245, 1);
+  --color-bg:#fff1ee;
+  --color-text-menu:rgba(113, 119, 142, 1);
+  --color-text-holder:rgba(149, 149, 169, 1);
+  --color-text-white: rgba(255, 255, 255, 1);
+  --color-text-black: rgba(32, 36, 53, 1);
+  --color-bg-green: rgba(0, 184, 83, 0.2);
+  --color-bg-black: rgba(32, 55, 88, 0);
+  --color-text-dark-green:rgba(3, 142, 66, 1);
+  --color-text-red:rgba(213, 18, 67, 1);
+  --color-text-light-gray:rgba(155, 155, 180, 1);
+  --color-btn-bg-blue:rgba(35, 58, 149, 1);
+
+
+  /* Fonts */
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Dosis", sans-serif;
+
+}
+
+.centering{
+  @apply  flex justify-center items-center;
+}
+
+.isActiveStyle {
+  @apply text-[var(--color-accent)] bg-hover w-[96px] h-[40px] rounded-[40px];
+}
+
+/* Plain CSS*/
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
 /* From Uiverse.io by SelfMadeSystem */
 .containerCART {
   cursor: pointer;
@@ -22,9 +65,4 @@
   transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
   stroke-dasharray: 241 9999999;
   stroke-dashoffset: 0;
-}
-
-.containerCART input:checked ~ svg .pathCART {
-  stroke-dasharray: 70.5096664428711 9999999;
-  stroke-dashoffset: -262.2723388671875;
 }

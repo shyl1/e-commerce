@@ -1,7 +1,7 @@
 import Avatar from "./avatar.svg?react";
 import Cart from "./cart.svg?react";
 import Menu from "./menu.svg?react";
-import Search from './search.svg?react';
+import SearchIcon from './search.svg?react';
 import ArrowDown from './down-arrow.svg?react';
 import Meat from "./meat.svg?react";
 import Bakery from './bakery.svg?react';
@@ -27,6 +27,7 @@ import Share from './share.svg?react';
 import Tag from './tag.svg?react';
 import Viewed from './viewed.svg?react';
 import Wishlist from './wishlist.svg?react';
+import DropDown from './drop.svg?react';
 
 
 
@@ -36,7 +37,7 @@ export {
   Avatar,
   Cart,
   Menu,
-  Search,
+  SearchIcon,
   ArrowDown,
   Meat,
   Bakery,
@@ -62,4 +63,5 @@ export {
   Tag,
   Viewed,
   Wishlist,
+  DropDown,
 }

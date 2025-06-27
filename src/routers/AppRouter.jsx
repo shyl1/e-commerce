@@ -11,6 +11,7 @@ import CategoryLayout from "@/UI/CategoryLayout";
 import Shop from "@/pages/Shop";
 import WishList from "@/pages/WishList";
 import SearchResults from "@/pages/SearchResults";
+import Cart from "@/pages/Cart";
 
 
 
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: 'Blog',
+        path: 'blog',
         element: <Blog />,
       },
       {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "search",
         element: <SearchResults />,
+      },
+      {
+        path: '/cart',
+        element: <Cart />
       },
     ],
   },
