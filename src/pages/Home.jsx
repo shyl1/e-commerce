@@ -1,13 +1,11 @@
-import React from 'react'
-import Footer from '../constants/Footer';
+import HomeCategory from "@/components/category/HomeCategory";
+import React from "react";
+
 
 export default function Home() {
   return (
     <div>
-      <h1 className="text-xl font-bold">Home</h1>
-
-      
-      <Footer />
+      <HomeCategory />
     </div>
   );
 }
