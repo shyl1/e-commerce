@@ -21,7 +21,7 @@ const InputCart = ({
         />
         <label
           htmlFor={id}
-          className="absolute  left-3 top-2 text-gray-500 transition-all duration-200 peer-focus:-translate-y-2 peer-focus:text-xs peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:text-xs "
+          className="absolute left-3 top-2 text-gray-500 transition-all duration-200 peer-focus:-translate-y-2 peer-focus:text-xs peer-[:not(:placeholder-shown)]:-translate-y-2 peer-[:not(:placeholder-shown)]:text-xs"
         >
           {placeholder}
         </label>
