@@ -25,19 +25,23 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'about-us',
+        path: '/about-us',
         element: <AboutUs />,
       }, 
       {
-        path: 'contact',
+        path: '/contact',
         element: <Contact />,
       },
       {
-        path: 'Blog',
+        path: '/Blog',
         element: <Blog />,
       },
       {
-        path: 'checkout',
+        path: '/shop',
+        element: <Shop/>,
+      },
+      {
+        path: '/checkout',
         element: <Checkout />,
       },
       {
@@ -55,11 +59,11 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: 'wishlist',
+        path: '/wishlist',
         element: <WishList />,
       },
       {
-        path: "search",
+        path: "/search",
         element: <SearchResults />,
       },
     ],
