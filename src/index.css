@@ -13,6 +13,15 @@
   --color-text-menu:rgba(113, 119, 142, 1);
   --color-text-holder:rgba(149, 149, 169, 1);
   --color-text-white: rgba(255, 255, 255, 1);
+  --color-text-black: rgba(32, 36, 53, 1);
+  --color-bg-green: rgba(0, 184, 83, 0.2);
+  --color-bg-black: rgba(32, 55, 88, 0);
+  --color-text-dark-green:rgba(3, 142, 66, 1);
+  --color-text-red:rgba(213, 18, 67, 1);
+  --color-text-light-gray:rgba(155, 155, 180, 1);
+  --color-btn-bg-blue:rgba(35, 58, 149, 1);
+
+
 
   /* Fonts */
   --font-heading: "Inter", sans-serif;
