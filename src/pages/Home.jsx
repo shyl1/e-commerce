@@ -9,10 +9,11 @@ export default function Home() {
     <section className='my-5'>
       <HeroSection />
       <div>
-      <HomeCategory />
+      <BestSellers/>
     </div>
     <div>
-      <BestSellers/>
+      <HomeCategory />
+      
     </div>
     </section>
   )
