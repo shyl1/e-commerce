@@ -11,7 +11,5 @@ export default function Home() {
       <HomeCategory />
     </div>
     </section>
-
-
   )
 }
