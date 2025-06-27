@@ -4,7 +4,7 @@ import SideRightCart from "./SideRightCart";
 
 const Checkout = () => {
   return (
-    <div className="w-[80%] sm:w-[90%] mx-auto">
+    <div className="w-[80%] sm:w-[90%] mx-auto mt-5">
       <div className="flex flex-col md:flex-row w-full">
         <div className="  flex-1">
           <SideLeftCart />
