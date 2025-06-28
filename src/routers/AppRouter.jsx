@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AboutUs from "@/pages/AboutUs";
 import Blog from "@/pages/Blog";
-import Checkout from "@/pages/Checkout";
+import Checkout from "@/components/checkout/Checkout";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
 import Home from "@/pages/Home";
@@ -11,6 +11,7 @@ import CategoryLayout from "@/UI/CategoryLayout";
 import Shop from "@/pages/Shop";
 import WishList from "@/pages/WishList";
 import SearchResults from "@/pages/SearchResults";
+import Cart from "@/pages/Cart";
 
 
 
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: '/Blog',
+        path: '/blog',
         element: <Blog />,
       },
       {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <SearchResults />,
+      },
+      {
+        path: '/cart',
+        element: <Cart />
       },
     ],
   },

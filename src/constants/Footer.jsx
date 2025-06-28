@@ -1,10 +1,23 @@
 
-import React from "react";
+import React from 'react';
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  FreshProducts,
+  Delivery,
+  Discounts,
+  Price,
+  Tele,
+  Envlope,
+} from '../assets/icons/svgs';
 
-import { Delivery, Discounts, Envlope, Facebook, FreshProducts, Instagram, Price, Tele, Twitter } from '@/assets/icons/svgs';
-import { AppStore, Coupon, GooglePlay, Payments } from '@/assets/images';
-
-
+import {
+  GooglePlay,
+  AppStore,
+  Payments,
+  Coupon,
+} from '../assets/images';
 
 const Footer = () => {
   return (
