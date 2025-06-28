@@ -10,7 +10,7 @@ const SideLeftCart = () => {
   };
 
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-4 ">
       <div className="Contact flex flex-col gap-3">
         <div className="flex justify-between items-end">
           <h1 className="text-sm font-bold">Contact</h1>
@@ -34,7 +34,7 @@ const SideLeftCart = () => {
               ></path>
             </svg>
           </label>
-          <label htmlFor="news" className="text-xs">
+          <label htmlFor="news" className="text-xs cursor-pointer">
             Email me with news and offers
           </label>
         </div>

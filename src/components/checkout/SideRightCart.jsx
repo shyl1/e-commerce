@@ -5,17 +5,17 @@ const SideRightCart = () => {
   return (
     <div className="flex flex-col gap-2">
       <CardCArt
-        image={"/src/assets/images/checkout/CH.png"}
+        image={"/src/assets/images/checkout/s.webp"}
         name={"All Natural Italian-Style Chicken Meatballs"}
         price={"7.25"}
       />
       <CardCArt
-        image={"/src/assets/images/checkout/COL.png"}
+        image={"/src/assets/images/checkout/colawebp.webp"}
         name={"Coca-Cola – 2 L Bottle"}
         price={"3.69"}
       />
       <CardCArt
-        image={"/src/assets/images/checkout/W.png"}
+        image={"/src/assets/images/checkout/Milk.png"}
         name={"Fairlife Lactose-Free 2% Milk"}
         price={"3.85"}
       />

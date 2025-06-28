@@ -61,7 +61,7 @@ const FormCart = () => {
               ></path>
             </svg>
           </label>
-          <label htmlFor="save" className="text-xs">
+          <label htmlFor="save" className="text-xs cursor-pointer">
             Save this information for next time
           </label>
         </div>
