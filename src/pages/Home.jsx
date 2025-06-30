@@ -1,9 +1,9 @@
-import HeroSection from "@/components/HomeComponents/HeroSection";
-import HomeCategory from "@/components/category/HomeCategory";
-import FirstPage from "@/components/first-section/FirstPage";
-import BestSellers from "@/components/lazyComponents/BestSellers";
-import PromoSection from "@/components/second-section/PromoSection";
-import CategoryGrid from "@/components/third-section/CategoryGrid";
+import HeroSection from "@/components/HomeComponents/HeroSection/HeroSection";
+import HomeCategory from "@/components/HomeComponents/Furit&Veges/HomeCategory";
+import FirstPage from "@/components/HomeComponents/Breakfast&Dairy/first-section/FirstPage";
+import BestSellers from "@/components/HomeComponents/BestSeller/BestSellers";
+import PromoSection from "@/components/HomeComponents/Breakfast&Dairy/second-section/PromoSection";
+import CategoryGrid from "@/components/HomeComponents/Breakfast&Dairy/third-section/CategoryGrid";
 import WrapperMargin from "@/constants/WrapperMargin";
 import React from "react";
 
@@ -20,8 +20,6 @@ export default function Home() {
           <FirstPage />
           <PromoSection />
           <CategoryGrid/>
-
-
         </div>
       </WrapperMargin>
     </section>

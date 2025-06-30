@@ -2,13 +2,13 @@ import React from 'react';
 
 const CategoryCard = ({ image, title, count, isFirst}) => {
   return (
-   <>
-   <div
+  <>
+  <div
     className={`bg-white shadow-sm rounded-md p-4 h-full ${
       isFirst ? "flex flex-col items-center" : "flex items-center gap-4"
     }`}
     >
-     <img
+      <img
         src={image}
         alt={title}
         className={`rounded object-cover flex-shrink-0 
@@ -21,7 +21,7 @@ const CategoryCard = ({ image, title, count, isFirst}) => {
         <p className="text-sm text-gray-600">{count} Items</p>
       </div>
       </div>
-   </>
+  </>
   );
 };
 

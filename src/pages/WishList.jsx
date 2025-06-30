@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { removeFromWishlist } from "@/redux/wishlistSlice";
+import { removeFromWishlist } from "@/store/wishlist/wishlistSlice";
 
 export default function Wishlist() {
   const { items } = useSelector((state) => state.wishlist);
@@ -15,14 +15,13 @@ if (!items.length) {
         alt="Empty Wishlist"
         className="max-w-xs w-full opacity-80"
       />
-       <p className="text-lg font-medium text-gray-600 tracking-wide">Wishlist is empty</p>
+      <p className="text-lg font-medium text-gray-600 tracking-wide">Wishlist is empty</p>
     </div>
   );
 }
 
 
-
- return (
+return (
     <div className="p-6 wishlist">
       <h1 className="text-2xl font-bold mb-4">My Wishlist</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">

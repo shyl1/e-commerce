@@ -1,5 +1,5 @@
-import productDetailsReducer from "../redux/productDetailsSlice.js";
-import wishlistReducer from "../redux/wishlistSlice.js";
+import productDetailsReducer from "./productDetails/productDetailsSlice.js";
+import wishlistReducer from "./wishlist/wishlistSlice.js";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({

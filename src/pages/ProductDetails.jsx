@@ -10,8 +10,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { fetchProductById } from "@/redux/productDetailsSlice";
-import { addToWishlist } from "@/redux/wishlistSlice.js";
+import { fetchProductById } from "@/store/productDetails/productDetailsSlice";
+import { addToWishlist } from "@/store/wishlist/wishlistSlice.js";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -33,7 +33,7 @@ console.log("Wishlist Items:", wishlistItems);
     dispatch(fetchProductById(id));
   }, [dispatch, id]);
 
- useEffect(() => {
+useEffect(() => {
   if (product?.images?.length) {
     setMainImage(product.images[0]);
   } else {
@@ -72,7 +72,7 @@ console.log("Wishlist Items:", wishlistItems);
   if (!product) return null;
 
   return (
-   <div
+  <div
     className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
     onClick={(e) => {
       if (e.target === e.currentTarget) {
@@ -124,7 +124,7 @@ console.log("Wishlist Items:", wishlistItems);
               <h2 className="text-2xl font-medium capitalize leading-8 text-black">{product.title}</h2>
               <p className="text-xl font-bold leading-7 text-black">${product.price}</p>
 
-             
+            
               <div className="my-7 pb-2">
                 <p className="text-black/70 text-base">available in:</p>
                 <ul className="flex flex-wrap gap-4 mt-5">
@@ -225,7 +225,7 @@ console.log("Wishlist Items:", wishlistItems);
             </div>
           </div>
 
-         
+        
           <div className="mt-14 px-8 py-6 overflow-hidden">
             <h2 className="text-2xl font-bold leading-8 mb-4">Related products</h2>
             <Swiper

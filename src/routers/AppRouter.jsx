@@ -2,7 +2,6 @@ import "react-toastify/dist/ReactToastify.css";
 import AboutUs from "@/pages/AboutUs";
 import Blog from "@/pages/Blog";
 import Cart from "@/pages/Cart";
-import CategoryLayout from "@/UI/CategoryLayout";
 import Checkout from "@/components/checkout/Checkout";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
@@ -48,16 +47,6 @@ const router = createBrowserRouter([
       {
         path: 'product/:id',
         element: <ProductDetails />,
-      },
-      {
-        path: 'category/:category',
-        element: <CategoryLayout />,
-        children: [
-          {
-            index:true,
-            element: <Shop />,
-          },
-        ],
       },
       {
         path: 'wishlist',

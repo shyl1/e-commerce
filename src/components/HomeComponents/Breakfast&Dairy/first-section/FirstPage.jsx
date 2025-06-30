@@ -62,7 +62,6 @@ const FirstPage = () => {
       name: "Fairlife Lactose-Free2% Milk",
       image: "/src/assets/images/task4/product5.png",
       price2:"$3.69"
-     
     },
     {
       name: "Nestle Original Coffee-Mate Coffee Creamer",
@@ -158,7 +157,6 @@ const FirstPage = () => {
 </div>
 
       </div>
-     
     </section>
   );
 };

@@ -1,8 +1,8 @@
-import Warning from "@/components/shared/HeaderComponents/Warning";
+import Warning from "@/components/HeaderComponents/Warning";
 import Footer from "@/components/shared/Footer";
 import Header from "@/components/shared/Header";
 import { Outlet } from "react-router-dom";
-import Bio from "@/components/shared/HeaderComponents/Bio";
+import Bio from "@/components/HeaderComponents/Bio";
 
 export default function MainLayout() {
   return (
