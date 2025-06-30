@@ -60,8 +60,8 @@ function BestSellers() {
   useEffect(() => product(), []);
 
   return (
-    <div>
-      <div className=" mx-auto  py-5 sm:max-w-lg md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl ">
+    <div >
+      <div className="py-5 ">
         <div className="flex justify-between">
           <div>
             <h3 className="font-semibold leading-3">Best Sellers</h3>
@@ -114,7 +114,7 @@ function BestSellers() {
               <div className="w-full flex  justify-center mt-3  ">
                 <button                                                      
                   type="botton"
-                  className="w-48 h-8 rounded-full cursor-pointer"
+                  className="px-10  h-8 rounded-full cursor-pointer"
                   style={{ backgroundColor: "#FFCD00" }}
                 >
                   Add to cart                                {/**--------------link Add to cart-------------*/}

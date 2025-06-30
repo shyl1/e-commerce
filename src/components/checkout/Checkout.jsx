@@ -1,18 +1,21 @@
 import React from "react";
 import SideLeftCart from "./SideLeftCart";
 import SideRightCart from "./SideRightCart";
+import WrapperMargin from "@/constants/WrapperMargin";
 
 const Checkout = () => {
   return (
-    <div className="w-[80%] sm:w-[90%] mx-auto mt-5">
-      <div className="flex flex-col md:flex-row w-full">
-        <div className="  flex-1">
-          <SideLeftCart />
+    <div className="mt-5">
+      <WrapperMargin>
+        <div className="flex flex-col-reverse md:flex-row md:gap-4 md:items-start  w-full">
+          <div className="flex-1 mb-4">
+            <SideLeftCart />
+          </div>
+          <div className=" flex-1 mb-12 mt-5">
+            <SideRightCart />
+          </div>
         </div>
-        <div className=" flex-1">
-          <SideRightCart />
-        </div>
-      </div>
+      </WrapperMargin>
     </div>
   );
 };

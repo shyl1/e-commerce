@@ -43,7 +43,7 @@ const HomeCategory = () => {
   ];
 
   return (
-    <section className="w-[95%] sm:w-[90%] mx-auto min-h-full lg:min-h-screen">
+    <section className="min-h-full lg:min-h-screen">
       {/* Header Section */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
         <div>
