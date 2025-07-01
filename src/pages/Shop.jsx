@@ -15,12 +15,10 @@ export default function Shop() {
 
   const [searchTerm, setSearchTerm] = useState('');
 
-  // ✅ تحميل المنتجات
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  // ✅ حفظ الكمية في localStorage لما تتغير
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
@@ -35,7 +33,7 @@ export default function Shop() {
   if (existing) {
     dispatch(updateQuantity({ id: product.id, quantity: existing.quantity + 1 }));
   } else {
-    dispatch(addToCart(product)); // أول مرة بنضيف المنتج
+    dispatch(addToCart(product)); 
   }
 };
 
@@ -45,7 +43,7 @@ const handleDecrease = (product) => {
   if (existing && existing.quantity > 1) {
     dispatch(updateQuantity({ id: product.id, quantity: existing.quantity - 1 }));
   } else if (existing && existing.quantity === 1) {
-    dispatch(updateQuantity({ id: product.id, quantity: 0 })); // أو تقدر تستخدم removeFromCart
+    dispatch(updateQuantity({ id: product.id, quantity: 0 })); 
   }
 };
 
@@ -53,7 +51,7 @@ const handleDecrease = (product) => {
   const filteredProducts = products.filter(
     (product) =>
       (product.title?.toLowerCase().includes(searchTerm) || searchTerm === '') &&
-      product.discountPercentage > 0 // عرض المنتجات اللي فيها خصم
+      product.discountPercentage > 0 
   );
 
   return (

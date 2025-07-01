@@ -101,13 +101,13 @@ function Login() {
           </div>:''}
           
         
-          <button className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+          <button className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">
             {isloading?<i className="fas fa-spinner fa-spin"></i>:'Login'}
           </button>
           <p className="mt-4 flex justify-between">
             Do not have account?
             <Link
-              to="/signup"
+              to="/register"
               className="text-green-500 font-semibold hover:text-green-600"
             >
               Register now ...
