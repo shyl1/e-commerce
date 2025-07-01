@@ -11,6 +11,11 @@ import ProductDetails from "@/pages/ProductDetails";
 import SearchResults from "@/pages/SearchResults";
 import Shop from "@/pages/Shop";
 import WishList from "@/pages/WishList";
+import UserContextProvider from "@/Context/AuthContext";
+import Register from "@/pages/Register";
+import Login from "@/pages/Login";
+
+
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
@@ -60,6 +65,14 @@ const router = createBrowserRouter([
         path: 'cart',
         element: <Cart />
       },
+      {
+        path: "register",
+        element: <Register />,
+      },
+      {
+        path: '/login',
+        element: <Login />
+      }
     ],
   },
 ]);
@@ -68,9 +81,18 @@ const router = createBrowserRouter([
 export default function AppRouter() {
   return (
     <>
-    <RouterProvider router={router} />
-    <ToastContainer position="top-right" autoClose={2000} />
+    
+      <UserContextProvider>
+        <RouterProvider router={router} />
+        <ToastContainer position="top-right" autoClose={2000} />
+      </UserContextProvider>
+  
+    
     </>
+    
+
+  
+
 
   )
 }
