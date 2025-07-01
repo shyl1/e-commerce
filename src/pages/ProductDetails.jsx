@@ -10,7 +10,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { fetchProductById } from "@/store/productDetails/productDetailsSlice";
+import { fetchProductById } from "@/store/productDetails/productDetailsSlice.js";
 import { addToWishlist } from "@/store/wishlist/wishlistSlice.js";
 
 export default function ProductDetails() {

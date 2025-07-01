@@ -40,3 +40,5 @@ const productDetailsSlice = createSlice({
 });
 
 export default productDetailsSlice.reducer;
+
+
