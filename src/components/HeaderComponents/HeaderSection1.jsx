@@ -8,15 +8,12 @@ import { useSelector } from 'react-redux'
 
 
 export default function HeaderSection1() {
-
-  const {items} = useSelector(state => state.cart);
-
+  const { items } = useSelector(state => state.cart);
+  const itemsArray = Array.isArray(items) ? items : [];
   // products Count
-  const productsCount = items.reduce((acc, item)=> acc + item.quantity , 0);
-
+  const productsCount = itemsArray.reduce((acc, item)=> acc + item.quantity , 0);
   // total Price 
-  const totalPrice = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
-
+  const totalPrice = itemsArray.reduce((acc, item) => acc + item.price * item.quantity, 0);
   return (
     <header className='container flex items-center justify-between lg:h-[92px] h-[60px] sm:h-[80px] select-none max-lg:px-2 bg-white '>
       <div className='flex items-center'>
