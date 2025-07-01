@@ -1,0 +1,18 @@
+.react-multiple-carousel__arrow--left {
+    left: calc(0% + 0px);
+}
+.react-multiple-carousel__arrow--right {
+    right: calc(0% + 0px);
+}
+
+.react-multiple-carousel__arrow::before {
+    font-size: 25px;
+    color: #0a0808;
+}
+.react-multiple-carousel__arrow {
+
+    background: rgba(255, 255, 255, 0.247);
+}
+.react-multiple-carousel__arrow:hover{
+    background-color: #EDEEF5;
+}
