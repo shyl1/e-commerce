@@ -12,6 +12,9 @@ import Shop from "@/pages/Shop";
 import WishList from "@/pages/WishList";
 import SearchResults from "@/pages/SearchResults";
 import Cart from "@/pages/Cart";
+import UserContextProvider from "@/Context/AuthContext";
+import Register from "@/pages/Register";
+import Login from "@/pages/Login";
 
 
 
@@ -71,6 +74,14 @@ const router = createBrowserRouter([
         path: '/cart',
         element: <Cart />
       },
+      {
+        path: "register",
+        element: <Register />,
+      },
+      {
+        path: '/login',
+        element: <Login />
+      }
     ],
   },
 ]);
@@ -78,6 +89,9 @@ const router = createBrowserRouter([
 
 export default function AppRouter() {
   return (
-    <RouterProvider router={router} />
+    <UserContextProvider>
+      <RouterProvider router={router} />
+    </UserContextProvider>
+    
   )
 }
