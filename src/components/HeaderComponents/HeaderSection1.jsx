@@ -4,9 +4,19 @@ import Search from './Search'
 import { Avatar } from '@/assets/icons/svgs'
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
-const productsCount = 0; // This should be replaced with actual logic to get the count of products in the cart
+
 export default function HeaderSection1() {
+
+  const {items} = useSelector(state => state.cart);
+
+  // products Count
+  const productsCount = items.reduce((acc, item)=> acc + item.quantity , 0);
+
+  // total Price 
+  const totalPrice = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
   return (
     <header className='container flex items-center justify-between lg:h-[92px] h-[60px] sm:h-[80px] select-none max-lg:px-2 bg-white '>
       <div className='flex items-center'>
@@ -19,7 +29,7 @@ export default function HeaderSection1() {
       </div>
       <div className='flex items-center justify-between gap-1 md:gap-2 lg:gap-4 font-heading text-xs h-full'>
         <Avatar className="w-[25px] h-[25px] sm:w-[35px] sm:h-[35px] md:w-[42px] md:h-[42px]"/>
-        <span className='font-body font-semibold text-xs md:text-base text-[var(--color-text)]'>{`$0.00`}</span>
+        <span className='font-body font-semibold text-xs md:text-base text-[var(--color-text)]'>{`$${totalPrice.toFixed(2)}`}</span>
         <CartWidget productsCount={productsCount}/>
       </div>
       

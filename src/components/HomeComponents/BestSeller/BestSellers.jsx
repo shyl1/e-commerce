@@ -1,14 +1,27 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import axios from "axios";
-import { useEffect, useRef, useState } from "react";
+import {  useEffect, useRef } from "react";
 import Rating from "@mui/material/Rating";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { AD5 } from "@/assets/images";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBestSeller } from "@/store/BestSeller/bestsellerslice";
+import { addToCart } from "@/store/cart/cartSlice";
+import { toast } from "react-toastify";
 
 
 function BestSellers() {
+
+  const {products , loading , error } = useSelector(state => state.bestSeller);
+  const dispatch = useDispatch();
+
+  useEffect(()=> {
+    dispatch(fetchBestSeller());
+  }, [dispatch]);
+
+
+
   let sliderRef = useRef(null);
 
   const settings = {
@@ -52,12 +65,6 @@ function BestSellers() {
     ],
   };
 
-  const [prc, setprc] = useState([]);
-  const url = "https://fakestoreapi.com/products";
-  const product = () => {
-    axios.get(url).then((res) => setprc(res.data));
-  };
-  useEffect(() => product(), []);
 
   return (
     <div >
@@ -83,11 +90,11 @@ function BestSellers() {
           {...settings}
           className="mt-8"
         >
-          {prc.map((e) => (
-            <div className="flex flex-col h-90  border-1 border-solid border-gray-200 ">
+          {products.map((e) => (
+            <div key={e.id} className="flex flex-col h-90  border-1 border-solid border-gray-200 ">
               <div className="h-1/3 flex justify-center my-5 ">
                 <img
-                  src={e.image}
+                  src={e.thumbnail}
                   alt="#"
                   className="w-fall h-1/1 object-cover"
                 />
@@ -113,9 +120,14 @@ function BestSellers() {
               </div>
               <div className="w-full flex  justify-center mt-3  ">
                 <button                                                      
-                  type="botton"
+                  type="button"
                   className="px-10  h-8 rounded-full cursor-pointer"
                   style={{ backgroundColor: "#FFCD00" }}
+                  onClick={()=> {
+                    dispatch(addToCart({ ...e, price: Number(e.price) })); //  pass full proucts array
+                    toast.success("Added To Cart" , { toastId: e.id }); // prevent duplicte toast
+                  }
+                  }
                 >
                   Add to cart                                {/**--------------link Add to cart-------------*/}
                 </button>
@@ -129,7 +141,7 @@ function BestSellers() {
           </p>
           <img src={AD5} alt="#" className="object-cover h-20 w-80 " />
           <button
-            type="botton"
+            type="button"
             className=" w-25 h-7 text-xs rounded-full bg-green-600 text-white cursor-pointer"
           >
             Shop Now
