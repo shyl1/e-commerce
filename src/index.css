@@ -66,13 +66,34 @@
   stroke-dasharray: 241 9999999;
   stroke-dashoffset: 0;
 }
+.about,.wishlist,.popup{
+  font-family: var(--font-heading);
+}
+.about-header{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../src/assets/images/about.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-.containerCART input:checked ~ svg .pathCART {
-  stroke: rgb(53, 108, 175); 
-  stroke-dasharray: 70.5096664428711 9999999;
-  stroke-dashoffset: -262.2723388671875;
 }
 
-.containerCART:hover .pathCART {
-  stroke: rgb(53, 175, 160);
+.swiper-button-next,.swiper-button-prev {
+  background-color: white;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.swiper-button-next::after,.swiper-button-prev::after {
+  font-size: 22px !important; 
+  color: #4b5563;
+  position: absolute;
+  left: 15px !important;
+  font-weight: 600 !important;
+}
+.swiper{
+  overflow: visible !important;
+}
+.related-item{
+    box-shadow: 0px 0px 6px 0px #4F5F781A !important;
 }

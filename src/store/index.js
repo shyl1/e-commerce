@@ -1,5 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
+import productDetailsReducer from "./productDetails/productDetailsSlice.js";
+import wishlistReducer from "./wishlist/wishlistSlice.js";
+import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    wishlist: wishlistReducer,
+    productDetails: productDetailsReducer,
+  },
 })

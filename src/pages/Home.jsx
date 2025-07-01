@@ -1,6 +1,9 @@
-import HeroSection from "@/components/HomeComponents/HeroSection";
-import HomeCategory from "@/components/category/HomeCategory";
-import BestSellers from "@/components/lazyComponents/BestSellers";
+import HeroSection from "@/components/HomeComponents/HeroSection/HeroSection";
+import HomeCategory from "@/components/HomeComponents/Furit&Veges/HomeCategory";
+import FirstPage from "@/components/HomeComponents/Breakfast&Dairy/first-section/FirstPage";
+import BestSellers from "@/components/HomeComponents/BestSeller/BestSellers";
+import PromoSection from "@/components/HomeComponents/Breakfast&Dairy/second-section/PromoSection";
+import CategoryGrid from "@/components/HomeComponents/Breakfast&Dairy/third-section/CategoryGrid";
 import WrapperMargin from "@/constants/WrapperMargin";
 import React from "react";
 
@@ -14,6 +17,9 @@ export default function Home() {
         </div>
         <div>
           <HomeCategory />
+          <FirstPage />
+          <PromoSection />
+          <CategoryGrid/>
         </div>
       </WrapperMargin>
     </section>

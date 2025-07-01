@@ -1,8 +1,7 @@
-
 import React from "react";
-
-import { Delivery, Discounts, Envlope, Facebook, FreshProducts, Instagram, Price, Tele, Twitter } from '@/assets/icons/svgs';
+import { Envlope, Tele } from '@/assets/icons/svgs';
 import { AppStore, Coupon, GooglePlay, Payments } from '@/assets/images';
+import { footerIcons, FooterList, footerSocial } from "@/constants";
 
 
 
@@ -41,15 +40,12 @@ const Footer = () => {
 
       {/* Feature Icons */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 py-6 px-4 bg-[#F7F8FD] sm:px-6 md:px-10 lg:px-[100px] xl:px-[250px] text-center">
-        {[
-          { icon: <FreshProducts className="w-5 h-5" />, text: "Everyday fresh products" },
-          { icon: <Delivery className="w-5 h-5" />, text: "Free delivery for order over $70" },
-          { icon: <Discounts className="w-5 h-5" />, text: "Daily Mega Discounts" },
-          { icon: <Price className="w-5 h-5" />, text: "Best price on the market" }
-        ].map((item, i, arr) => (
+        {footerIcons.map((item, i, arr) => (
           <React.Fragment key={i}>
             <div className="flex items-center justify-center gap-2">
-              {item.icon}
+              <span className="w-5 h-5">
+                <item.icon/>
+              </span>
               <span className="text-[#202435] font-medium">{item.text}</span>
             </div>
             {i < arr.length - 1 && (
@@ -66,13 +62,7 @@ const Footer = () => {
 
       {/* Category Columns */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-6 py-10 px-4 bg-[#F7F8FD] sm:px-6 md:px-10 lg:px-[100px] xl:px-[250px]">
-        {[
-          { title: 'FRUIT & VEGETABLES', items: ['Fresh Vegetables', 'Herbs & Seasonings', 'Fresh Fruits', 'Cuts & Sprouts', 'Exotic Fruits & Veggies', 'Packaged Produce', 'Party Trays'] },
-          { title: 'BREAKFAST & DAIRY', items: ['Milk & Flavoured Milk', 'Butter and Margarine', 'Cheese', 'Eggs Substitutes', 'Honey', 'Marmalades', 'Sour Cream and Dips', 'Yogurt'] },
-          { title: 'MEAT & SEAFOOD', items: ['Breakfast Sausage', 'Dinner Sausage', 'Beef', 'Chicken', 'Sliced Deli Meat', 'Shrimp', 'Wild Caught Fillets', 'Crab and Shellfish', 'Farm Raised Fillets'] },
-          { title: 'BEVERAGES', items: ['Water', 'Sparkling Water', 'Soda & Pop', 'Coffee', 'Milk & Plant-Based Milk', 'Tea & Kombucha', 'Drink Boxes & Pouches', 'Craft Beer', 'Wine'] },
-          { title: 'BREADS & BAKERY', items: ['Milk & Flavoured Milk', 'Butter and Margarine', 'Cheese', 'Eggs Substitutes', 'Honey', 'Marmalades', 'Sour Cream and Dips', 'Yogurt'] }
-        ].map((col, idx) => (
+        {FooterList.map((col, idx) => (
           <div key={idx}>
             <h3 className="font-bold mb-2 text-sm">{col.title}</h3>
             <ul className="space-y-1 text-xs text-[#71778E]">
@@ -103,10 +93,12 @@ const Footer = () => {
             <img src={AppStore} className="h-10 w-auto" />
           </div>
 
-          <div className="flex gap-2 items-center">
-            <Facebook className="w-8 h-8" />
-            <Twitter className="w-8 h-8" />
-            <Instagram className="w-8 h-8" />
+          <div className="flex gap-2 items-center" >
+            {
+              footerSocial.map((Icon , i ) => (
+                <Icon key={i} className="w-8 h-8"/>
+              ))
+            }
           </div>
         </div>
       </div>

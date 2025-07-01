@@ -3,13 +3,16 @@ import React from 'react'
 import Search from './Search'
 import { Avatar } from '@/assets/icons/svgs'
 import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom'
 
 const productsCount = 0; // This should be replaced with actual logic to get the count of products in the cart
 export default function HeaderSection1() {
   return (
     <header className='container flex items-center justify-between lg:h-[92px] h-[60px] sm:h-[80px] select-none max-lg:px-2 bg-white '>
       <div className='flex items-center'>
-        <img src={Logo} alt="Basket Logo"  className='lg:w-[165px] lg:h-[62px] min-w-[90px] h-[40px]'/>
+        <Link to={'/'}>
+          <img src={Logo} alt="Basket Logo"  className='lg:w-[165px] lg:h-[62px] min-w-[90px] h-[40px] cursor-pointer' />
+        </Link>
       </div>
       <div className='flex items-center'>
         <Search />

@@ -1,22 +1,23 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 import AboutUs from "@/pages/AboutUs";
 import Blog from "@/pages/Blog";
+import Cart from "@/pages/Cart";
 import Checkout from "@/components/checkout/Checkout";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
 import Home from "@/pages/Home";
-import ProductDetails from "@/pages/ProductDetails";
 import MainLayout from "@/UI/MainLayout";
-import CategoryLayout from "@/UI/CategoryLayout";
+import ProductDetails from "@/pages/ProductDetails";
+import SearchResults from "@/pages/SearchResults";
 import Shop from "@/pages/Shop";
 import WishList from "@/pages/WishList";
-import SearchResults from "@/pages/SearchResults";
-import Cart from "@/pages/Cart";
 import UserContextProvider from "@/Context/AuthContext";
 import Register from "@/pages/Register";
 import Login from "@/pages/Login";
 
 
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -53,16 +54,6 @@ const router = createBrowserRouter([
         element: <ProductDetails />,
       },
       {
-        path: 'category/:category',
-        element: <CategoryLayout />,
-        children: [
-          {
-            index:true,
-            element: <Shop />,
-          },
-        ],
-      },
-      {
         path: 'wishlist',
         element: <WishList />,
       },
@@ -89,9 +80,17 @@ const router = createBrowserRouter([
 
 export default function AppRouter() {
   return (
-    <UserContextProvider>
-      <RouterProvider router={router} />
-    </UserContextProvider>
+    <>
+      <UserContextProvider>
+        <RouterProvider router={router} />
+        <ToastContainer position="top-right" autoClose={2000} />
+      </UserContextProvider>
     
+    </>
+    
+
+  
+
+
   )
 }
