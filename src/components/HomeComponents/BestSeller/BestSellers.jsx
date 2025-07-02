@@ -1,7 +1,4 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import {  useEffect, useRef } from "react";
+import { useEffect} from "react";
 import Rating from "@mui/material/Rating";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { AD5 } from "@/assets/images";
@@ -9,6 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchBestSeller } from "@/store/BestSeller/bestsellerslice";
 import { addToCart } from "@/store/cart/cartSlice";
 import { toast } from "react-toastify";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import "./BestSellers.css"
 import Heading from "@/components/shared/Heading";
 
 
@@ -22,50 +22,14 @@ function BestSellers() {
   }, [dispatch]);
 
 
-
-  let sliderRef = useRef(null);
-
-  const settings = {
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 2,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 924,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
+const responsive = {
+  superLargeDesktop: {breakpoint: { max: 4000, min: 3000 },items: 6},
+  desktop: {breakpoint: { max: 3000, min: 1024 },items: 5},
+  desktop2: {breakpoint: { max: 1024, min: 800 },items: 3},
+  tablet: { breakpoint: { max: 800, min: 464 }, items: 2 },
+  mobile: {breakpoint: { max: 464, min: 0 },items: 1}
+  
+};
 
   return (
     <div >
@@ -83,11 +47,7 @@ function BestSellers() {
           </button>
         </div>
 
-        <Slider
-          ref={(slider) => (sliderRef = slider)}
-          {...settings}
-          className="mt-8"
-        >
+        <Carousel autoPlay responsive={responsive} infinite={true}>
           {products.map((e) => (
             <div key={e.id} className="flex flex-col h-90  border-1 border-solid border-gray-200 ">
               <div className="h-1/3 flex justify-center my-5 ">
@@ -99,6 +59,7 @@ function BestSellers() {
               </div>
               <div className="h-12 ml-3">
                 <h3>{`${e.title.substring(0, 40)}`}</h3>
+                <p className="text-xs text-[#9B9BB4]">{`${e.description.substring(0, 30)}...`}</p>
               </div>
               <a href="#" className="text-green-600 m-3 text-xs">
                 IN STOCK
@@ -106,21 +67,21 @@ function BestSellers() {
               <div className="flex content-center h-5  ml-3">
                 <Rating
                   name="half-rating-read"
-                  defaultValue={e.rating.rate}
+                  defaultValue={e.rating}
                   precision={0.5}
                   readOnly
                   size="small"
                 />
-                <p className="text-xs text-gray-500">{e.rating.count} review</p>
+                <p className="text-xs text-gray-500">{e.reviews.length} review</p>
               </div>
               <div className="ml-8 mt-2   text-red-700">
                 <p>${e.price}</p>
               </div>
-              <div className="w-full flex  justify-center mt-3  ">
+              <div className="w-full flex  justify-center mt-3 ">
                 <button                                                      
                   type="button"
                   className="px-10  h-8 rounded-full cursor-pointer"
-                  style={{ backgroundColor: "#FFCD00" }}
+                  style={{ backgroundColor: "#FFCD00" }} 
                   onClick={()=> {
                     dispatch(addToCart({ ...e, price: Number(e.price) })); //  pass full proucts array
                     toast.success("Added To Cart" , { toastId: e.id }); // prevent duplicte toast
@@ -132,7 +93,7 @@ function BestSellers() {
               </div>
             </div>
           ))}
-        </Slider>
+        </Carousel>
         <div className="flex justify-around items-center bg-red-50 mt-10  ">
           <p className= " sm:text-green-600 font-semibold text-xl  text-green-600  ">
             100% Secure delivery without contacting the courier
