@@ -39,6 +39,16 @@ export default function Cart() {
                 <div className="mt-2 p-2">
                   <CartItems />
                 </div>
+
+                <div className="flex justify-end mt-5 ">
+                  <button className="bg-accent text-[var(--color-text-white)] w-[250px] cursor-pointer p-2 scale-90 hover:scale-100 transition-all duration-100" 
+                    onClick={()=> {
+                      navigate('/checkout');
+                    }}
+                  >
+                    Check Out
+                  </button>
+                </div>
               </div>
           </>
         ) : (
