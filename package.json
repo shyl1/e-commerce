@@ -26,7 +26,8 @@
     "react-toastify": "^11.0.5",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.9",
-    "tailwindcss": "^4.1.10"
+    "tailwindcss": "^4.1.10",
+    "use-search-react": "^1.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
