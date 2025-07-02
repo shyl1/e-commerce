@@ -10,6 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Avatar from '@mui/material/Avatar';
 
 export default function HeaderSection1() {
+
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -36,6 +37,14 @@ export default function HeaderSection1() {
   const productsCount = items.reduce((acc, item) => acc + item.quantity, 0);
   const totalPrice = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
+=======
+  const { items } = useSelector(state => state.cart);
+  const itemsArray = Array.isArray(items) ? items : [];
+  // products Count
+  const productsCount = itemsArray.reduce((acc, item)=> acc + item.quantity , 0);
+  // total Price 
+  const totalPrice = itemsArray.reduce((acc, item) => acc + item.price * item.quantity, 0);
+>>>>>>> b191b872a205164458d1fefdb00401ec59d2586e
   return (
     <header className='container flex items-center justify-between lg:h-[92px] h-[60px] sm:h-[80px] select-none max-lg:px-2 bg-white'>
       <div className='flex items-center'>

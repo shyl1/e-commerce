@@ -113,7 +113,6 @@ function Login() {
               Register now ...
             </Link>
           </p>
- 
       </form>
     </>
   );
