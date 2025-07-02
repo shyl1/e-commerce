@@ -1,46 +1,36 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-
-// API Thunk
-export const fetchProducts = createAsyncThunk(
-  'products/fetchProducts',
-  async (_, thunkAPI) => {
-    try {
-      const res = await axios.get('https://dummyjson.com/products?limit=30');
-      return res.data.products;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
+import { createSlice } from '@reduxjs/toolkit';
+import fetchGateoryProducts from './thunk/actionGetCategoryProducts';
 
 // Initial State
 const initialState = {
   items: [],
-  loading: 'idle', 
+  loading: 'idle', // 'idle' | 'loading' | 'succeeded' | 'failed'
   error: null,
 };
 
 // Slice
 const productSlice = createSlice({
-  name: 'products',
+  name: 'categoryProducts',
   initialState,
   reducers: {
+    // تقدر تضيف أي reducers خاصة بالتحديث أو الفلترة هنا لو حبيت
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchProducts.pending, (state) => {
+      .addCase(fetchGateoryProducts.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchProducts.fulfilled, (state, action) => {
+      .addCase(fetchGateoryProducts.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.items = action.payload;
       })
-      .addCase(fetchProducts.rejected, (state, action) => {
+      .addCase(fetchGateoryProducts.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.payload;
       });
   }
 });
 
+export {fetchGateoryProducts};
 export default productSlice.reducer;
+

@@ -1,64 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProducts } from '../store/categorySlice/categorySlices';
-import { addToCart, updateQuantity } from '../store/cart/cartSlice';
+import { fetchGateoryProducts } from '../store/categorySlice/categorySlices';
 import headerImg from '../assets/images/category-image.png';
 import Sidebar from './Sidebar';
 import Card from '@/components/Card/Card';
 
 export default function Shop() {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products.items);
-  const status = useSelector((state) => state.products.status);
-  const error = useSelector((state) => state.products.error);
-  const cartItems = useSelector((state) => state.cart.items);
+
+  const {items , status , error , } = useSelector((state) => state.categoryProducts);
+
+  const { items: cartItems } = useSelector((state) => state.cart);
+
 
   const [searchTerm, setSearchTerm] = useState('');
 
+  // تحميل المنتجات
   useEffect(() => {
-    dispatch(fetchProducts());
+    dispatch(fetchGateoryProducts());
   }, [dispatch]);
 
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cartItems));
-  }, [cartItems]);
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
   };
 
- const handleIncrease = (product) => {
-  const existing = cartItems.find((item) => item.id === product.id);
 
-  if (existing) {
-    dispatch(updateQuantity({ id: product.id, quantity: existing.quantity + 1 }));
-  } else {
-    dispatch(addToCart(product)); 
-  }
-};
-
-const handleDecrease = (product) => {
-  const existing = cartItems.find((item) => item.id === product.id);
-
-  if (existing && existing.quantity > 1) {
-    dispatch(updateQuantity({ id: product.id, quantity: existing.quantity - 1 }));
-  } else if (existing && existing.quantity === 1) {
-    dispatch(updateQuantity({ id: product.id, quantity: 0 })); 
-  }
-};
-
-
-  const filteredProducts = products.filter(
+  const filteredProducts = items.filter(
     (product) =>
       (product.title?.toLowerCase().includes(searchTerm) || searchTerm === '') &&
-      product.discountPercentage > 0 
+      product.discountPercentage > 0
   );
 
   return (
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         <Sidebar />
+
         <div className="col-span-3">
+          {/* Search */}
           <div className="mb-6">
             <input
               type="text"
@@ -69,6 +49,7 @@ const handleDecrease = (product) => {
             />
           </div>
 
+          {/* Header image */}
           <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-lg mb-8">
             <img src={headerImg} alt="Delicious Meal" className="w-full h-full object-cover" />
             <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 text-white bg-black/30">
@@ -82,6 +63,7 @@ const handleDecrease = (product) => {
             </div>
           </div>
 
+          {/* Product Grid */}
           {status === 'loading' && (
             <p className="text-gray-500 text-center">Loading products...</p>
           )}
@@ -94,13 +76,12 @@ const handleDecrease = (product) => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {filteredProducts.map((product) => {
                 const cartProduct = cartItems.find((item) => item.id === product.id);
+                const productsCount = cartProduct?.quantity || 0;
                 return (
                   <Card
                     key={product.id}
                     product={product}
-                    quantity={cartProduct?.quantity || 0}
-                    onIncrease={() => handleIncrease(product)}
-                    onDecrease={() => handleDecrease(product)}
+                    productsCount={productsCount}
                   />
                 );
               })}
@@ -111,3 +92,4 @@ const handleDecrease = (product) => {
     </div>
   );
 }
+

@@ -1,5 +1,6 @@
 import bestSeller from "./BestSeller/bestsellerslice.js";
 import cart from "./cart/cartSlice.js";
+import categoryProducts from './categorySlice/categorySlices.js'
 import homeproducts from "./HomeCategoryProducts/homecategoryslice.js"
 import productDetailsReducer from "./productDetails/productDetailsSlice.js";
 import wishlistReducer from "./wishlist/wishlistSlice.js";
@@ -12,5 +13,6 @@ export const store = configureStore({
     cart,
     bestSeller,
     homeproducts,
+    categoryProducts,
   },
 });

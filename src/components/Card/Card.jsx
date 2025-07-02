@@ -1,20 +1,25 @@
+import { addToCart, removeFromCart } from '@/store/cart/cartSlice';
 import React from 'react';
 import { CiCircleMinus, CiCirclePlus } from 'react-icons/ci';
+import { useDispatch } from 'react-redux';
 
-export default function Card({ product, quantity, onIncrease, onDecrease }) {
+export default function Card({ product, productsCount }) {
   const {
+    id,
     title = 'No Title',
     thumbnail,
     price,
     discountPercentage = 0,
   } = product;
 
+  const dispatch = useDispatch(); 
+
   const numericPrice = Number(price) || 0;
   const unitDiscount = numericPrice * (discountPercentage / 100);
   const discountedUnitPrice = numericPrice - unitDiscount;
 
-  const originalTotal = (numericPrice * quantity).toFixed(2);
-  const discountedTotal = (discountedUnitPrice * quantity).toFixed(2);
+  const originalTotal = (numericPrice * productsCount).toFixed(2);
+  const discountedTotal = (discountedUnitPrice * productsCount).toFixed(2);
 
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden p-4 flex flex-col justify-between">
@@ -34,16 +39,21 @@ export default function Card({ product, quantity, onIncrease, onDecrease }) {
 
         <div className="flex items-center justify-between mt-auto">
           <button
-            onClick={onDecrease}
+            disabled={productsCount <= 0}
+            onClick={()=> {
+              dispatch(removeFromCart(id));
+            }}
             className="text-2xl p-1 text-gray-600 hover:text-red-500"
           >
             <CiCircleMinus />
           </button>
 
-          <span className="text-lg font-medium">{quantity}</span>
+          <span className="text-lg font-medium">{productsCount}</span>
 
           <button
-            onClick={onIncrease}
+            onClick={()=> {
+              dispatch(addToCart(product));
+            }}
             className="text-2xl p-1 text-gray-600 hover:text-green-500"
           >
             <CiCirclePlus />
