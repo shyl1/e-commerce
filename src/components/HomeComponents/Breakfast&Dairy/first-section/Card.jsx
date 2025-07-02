@@ -1,12 +1,20 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({product, discount  }) => {
+  const { id , title , thumbnail  , price} = product;
 
-  const { title , thumbnail  , price} = product;
+  
+  const navigate = useNavigate();
+
+  function productPopUp() {
+  navigate(`/product/${id}`);
+  }
+
+
   return (
     <div className="relative p-4 h-full flex flex-col justify-between border-2 border-gray-200">
       <div>
-        <img className="w-full h-full object-cover" src={thumbnail} alt={title} />
+        <img className="w-full h-full object-cover cursor-pointer" src={thumbnail} alt={title}  onClick={productPopUp}/>
 
         {discount && (
           <div className="absolute top-3 left-3 md:top-5 md:left-5 bg-[#35AFA0] text-white text-xs px-1 py:1 md:px-2 md:py-1 rounded-md">

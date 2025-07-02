@@ -2,6 +2,7 @@ import { addToCart, removeFromCart } from '@/store/cart/cartSlice';
 import React from 'react';
 import { CiCircleMinus, CiCirclePlus } from 'react-icons/ci';
 import { useDispatch } from 'react-redux';
+import {  useNavigate } from 'react-router-dom';
 
 export default function Card({ product, productsCount }) {
   const {
@@ -13,6 +14,12 @@ export default function Card({ product, productsCount }) {
   } = product;
 
   const dispatch = useDispatch(); 
+
+  const navigate = useNavigate();
+
+  function productPopUp() {
+  navigate(`/product/${id}`);
+  }
 
   const numericPrice = Number(price) || 0;
   const unitDiscount = numericPrice * (discountPercentage / 100);
@@ -26,7 +33,8 @@ export default function Card({ product, productsCount }) {
       <img
         src={thumbnail}
         alt={title}
-        className="w-full h-48 object-cover rounded-lg mb-4"
+        className="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer"
+        onClick={productPopUp}
       />
 
       <div className="flex flex-col h-full">

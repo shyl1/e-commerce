@@ -12,12 +12,19 @@ import "./BestSellers.css"
 import Heading from "@/components/shared/Heading";
 import { responsive } from "@/constants";
 import ViewAll from "@/components/shared/ViewAll";
+import { useNavigate } from "react-router-dom";
 
 
 function BestSellers() {
 
   const {products  , error } = useSelector(state => state.bestSeller);
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  function productPopUp(productId) {
+  navigate(`/product/${productId}`);
+  }
 
   useEffect(()=> {
     dispatch(fetchBestSeller());
@@ -44,13 +51,16 @@ function BestSellers() {
 
         <Carousel autoPlay responsive={responsive} infinite={true} >
           { products.map((e) => (
-            <div key={e.id} className="flex flex-col h-90  border-1 border-solid border-gray-200 ">
+            <div key={e.id} className="flex flex-col h-90  border-1 border-solid border-gray-200 "
+            
+            >
               <div className="h-1/3 flex justify-center my-5 ">
                 <img
                   src={e.thumbnail}
                   alt="#"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain cursor-pointer"
                   loading="lazy"
+                  onClick={()=> productPopUp(e.id)}
                 />
               </div>
               <div className="h-12 ml-3">

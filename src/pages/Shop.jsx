@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchGateoryProducts } from '../store/categorySlice/categorySlices';
 import headerImg from '../assets/images/category-image.png';
 import Sidebar from './Sidebar';
-import Card from '@/components/Card/Card';
+import Card from '@/components/ShopCategoryCard/Card';
 
 export default function Shop() {
   const dispatch = useDispatch();
