@@ -1,5 +1,6 @@
 import bestSeller from "./BestSeller/bestsellerslice.js";
 import cart from "./cart/cartSlice.js";
+import search from './Search/searchslice.js'
 import categoryProducts from './categorySlice/categorySlices.js'
 import homeproducts from "./HomeCategoryProducts/homecategoryslice.js"
 import productDetailsReducer from "./productDetails/productDetailsSlice.js";
@@ -14,5 +15,6 @@ export const store = configureStore({
     bestSeller,
     homeproducts,
     categoryProducts,
+    search,
   },
 });
