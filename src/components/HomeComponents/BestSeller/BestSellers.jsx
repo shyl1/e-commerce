@@ -10,11 +10,13 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import "./BestSellers.css"
 import Heading from "@/components/shared/Heading";
+import { responsive } from "@/constants";
+import ViewAll from "@/components/shared/ViewAll";
 
 
 function BestSellers() {
 
-  const {products , loading , error } = useSelector(state => state.bestSeller);
+  const {products  , error } = useSelector(state => state.bestSeller);
   const dispatch = useDispatch();
 
   useEffect(()=> {
@@ -22,39 +24,33 @@ function BestSellers() {
   }, [dispatch]);
 
 
-const responsive = {
-  superLargeDesktop: {breakpoint: { max: 4000, min: 3000 },items: 6},
-  desktop: {breakpoint: { max: 3000, min: 1024 },items: 5},
-  desktop2: {breakpoint: { max: 1024, min: 800 },items: 3},
-  tablet: { breakpoint: { max: 800, min: 464 }, items: 2 },
-  mobile: {breakpoint: { max: 464, min: 0 },items: 1}
-  
-};
+  if(error){
+    return(
+      <div className="text-red-400 text-3xl">
+        {error}
+      </div>
+    );
+  }
+
 
   return (
     <div >
       <div className="py-5 ">
-        <div className="flex justify-between">
-          
+        <div className="flex justify-between mb-5">
+          {/* Header and btn */}
           <Heading header={"Best Sellers"} text={" Do not miss the current offers until the end of March."}/>
-
-          <button
-            type="botton"
-            className="flex justify-center items-center w-25 h-7 text-xs rounded-full border border-gray-300 text-gray-400 cursor-pointer"
-          >
-            {" "}
-            View All <HiArrowNarrowRight className="text-lg ml-3" />{/**------------link all product----------*/}
-          </button>
+          <ViewAll />
         </div>
 
-        <Carousel autoPlay responsive={responsive} infinite={true}>
-          {products.map((e) => (
+        <Carousel autoPlay responsive={responsive} infinite={true} >
+          { products.map((e) => (
             <div key={e.id} className="flex flex-col h-90  border-1 border-solid border-gray-200 ">
               <div className="h-1/3 flex justify-center my-5 ">
                 <img
                   src={e.thumbnail}
                   alt="#"
-                  className="w-fall h-1/1 object-cover"
+                  className="w-full h-full object-contain"
+                  loading="lazy"
                 />
               </div>
               <div className="h-12 ml-3">
@@ -92,7 +88,8 @@ const responsive = {
                 </button>
               </div>
             </div>
-          ))}
+          ))
+          }
         </Carousel>
         <div className="flex justify-around items-center bg-red-50 mt-10  ">
           <p className= " sm:text-green-600 font-semibold text-xl  text-green-600  ">
