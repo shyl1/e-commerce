@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchBestSeller } from "@/store/BestSeller/bestsellerslice";
 import { addToCart } from "@/store/cart/cartSlice";
 import { toast } from "react-toastify";
+import Heading from "@/components/shared/Heading";
 
 
 function BestSellers() {
@@ -70,12 +71,9 @@ function BestSellers() {
     <div >
       <div className="py-5 ">
         <div className="flex justify-between">
-          <div>
-            <h3 className="font-semibold leading-3">Best Sellers</h3>
-            <p className="text-xs text-gray-500 ">
-              Do not miss the current offers until the end of March.
-            </p>
-          </div>
+          
+          <Heading header={"Best Sellers"} text={" Do not miss the current offers until the end of March."}/>
+
           <button
             type="botton"
             className="flex justify-center items-center w-25 h-7 text-xs rounded-full border border-gray-300 text-gray-400 cursor-pointer"

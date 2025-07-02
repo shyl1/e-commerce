@@ -8,7 +8,7 @@ const fetchProducts = createAsyncThunk("homeproducts/fetchProducts" , async(_ , 
 
   try{
     const response = await axios.get("https://dummyjson.com/products");
-    return response.data.products.slice(0, 20);
+    return response.data.products.slice(0, 8);
   } catch (error){
     if (axios.isAxiosError(error)){
       return rejectWithValue(error.response?.data.message || error.message);

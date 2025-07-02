@@ -65,6 +65,36 @@ export const avalablity = [
   }
 ];
 
+export const VerticalBorder = [
+    {
+      name: "Beverages",
+    },
+    {
+      name: "Biscuits & Snacks",
+    },
+    {
+      name: "Breads & Bakery",
+    },
+    {
+      name: "Breakfast & Dairy",
+    },
+    {
+      name: "Frozen Foods",
+    },
+    {
+      name: "Fruits & Vegetables",
+    },
+    {
+      name: "Grocery & Staples",
+    },
+    {
+      name: "Household Needs",
+    },
+    {
+      name: "Meats & Seafood",
+    },
+  ];
+
 
 // Footer section
 export const FooterList = [

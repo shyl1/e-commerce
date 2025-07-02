@@ -34,7 +34,7 @@ const CardCategory = ({ product, discount }) => {
 
         <div className="flex items-center gap-1">
           <img src="/src/assets/images/category/stars.png" alt="star" />
-          <div className="text-xs md:text-sm line-clamp-1">1review</div>
+          <div className="text-xs md:text-sm line-clamp-1">1 review</div>
         </div>
 
         <div className="flex items-center gap-1 text-xs sm:text-base">
