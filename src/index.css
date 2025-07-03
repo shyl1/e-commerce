@@ -66,6 +66,12 @@
   stroke-dasharray: 241 9999999;
   stroke-dashoffset: 0;
 }
+
+.containerCART input:checked + svg .pathCART {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+  stroke: rgb(34, 197, 94);
+}
 .about,.wishlist,.popup{
   font-family: var(--font-heading);
 }
