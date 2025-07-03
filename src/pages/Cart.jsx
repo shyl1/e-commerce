@@ -1,3 +1,4 @@
+import BreadCrumbs from "@/components/Breadcrumbs/BreadCrumbs";
 import CartItems from "@/components/CartComponents/CartItems";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -17,6 +18,7 @@ export default function Cart() {
 
   const showCartDetails = totalQuantity !== 0 ;
   return (
+    
     <section className="container">
 
       {
@@ -38,6 +40,7 @@ export default function Cart() {
                 </div>
                 <div className="mt-2 p-2">
                   <CartItems />
+                  <BreadCrumbs/>
                 </div>
 
                 <div className="flex justify-end mt-5 ">
