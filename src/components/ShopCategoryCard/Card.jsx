@@ -2,6 +2,7 @@ import { addToCart, removeFromCart } from '@/store/cart/cartSlice';
 import React from 'react';
 import { CiCircleMinus, CiCirclePlus } from 'react-icons/ci';
 import { useDispatch } from 'react-redux';
+import {  useNavigate } from 'react-router-dom';
 
 export default function Card({ product, productsCount }) {
   const {
@@ -14,8 +15,20 @@ export default function Card({ product, productsCount }) {
 
   const dispatch = useDispatch();
 
+<<<<<<< HEAD:src/components/Card/Card.jsx
   const numericPrice = Number(price);
   const isValidPrice = !isNaN(numericPrice) && numericPrice > 0;
+=======
+  const navigate = useNavigate();
+
+  function productPopUp() {
+  navigate(`/product/${id}`);
+  }
+
+  const numericPrice = Number(price) || 0;
+  const unitDiscount = numericPrice * (discountPercentage / 100);
+  const discountedUnitPrice = numericPrice - unitDiscount;
+>>>>>>> faf571583133d1367e7d2f56ef38568bcdd03dcd:src/components/ShopCategoryCard/Card.jsx
 
   const unitDiscount = isValidPrice ? numericPrice * (discountPercentage / 100) : 0;
   const discountedUnitPrice = isValidPrice ? numericPrice - unitDiscount : 0;
@@ -28,7 +41,8 @@ export default function Card({ product, productsCount }) {
       <img
         src={thumbnail}
         alt={title}
-        className="w-full h-48 object-cover rounded-lg mb-4"
+        className="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer"
+        onClick={productPopUp}
       />
 
       <div className="flex flex-col h-full">

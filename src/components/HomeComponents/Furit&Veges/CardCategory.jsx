@@ -1,20 +1,27 @@
 import { addToCart } from "@/store/cart/cartSlice";
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const CardCategory = ({ product, discount }) => {
 
   const dispatch = useDispatch();
 
-  const { title , thumbnail , stock , price} = product;
+  const { id ,title , thumbnail , stock , price} = product;
 
-  console.log("products in cat" , product);
+  
+  const navigate = useNavigate();
+
+  function productPopUp() {
+  navigate(`/product/${id}`);
+  }
+
   return (
     <div className="relative p-4 h-full flex flex-col justify-between border-2 border-gray-200">
       {/* Product Image */}
       <div>
-        <img className="w-full h-full object-cover" src={thumbnail} alt={title} />
+        <img className="w-full h-full object-cover cursor-pointer" src={thumbnail} alt={title} onClick={productPopUp}/>
 
         {/* Discount Badge */}
         {discount && (
