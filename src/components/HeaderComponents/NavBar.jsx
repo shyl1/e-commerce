@@ -1,12 +1,12 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Bakery, Cup, DropDown, Meat } from "@/assets/icons/svgs";
 import { Avatar, IconButton, Menu, MenuItem } from "@mui/material";
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import { UserContext } from "@/Context/AuthContext"; // عدل حسب المسار الحقيقي
 
 export default function NavBar() {
-  const { Token, setToken } = useContext(UserContext);
-  const navigate = useNavigate();
+  // const { Token, setToken } = useContext(UserContext);
+  // const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -17,17 +17,16 @@ export default function NavBar() {
     setAnchorEl(null);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    setToken(null);
-    handleClose();
-    navigate("/login");
-  };
+  // const handleLogout = () => {
+  //   localStorage.removeItem("token");
+  //   setToken(null);
+  //   handleClose();
+  //   navigate("/login");
+  // };
 
   return (
     <>
-      {Token ? (
-        <>
+    
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -96,12 +95,9 @@ export default function NavBar() {
             onClose={handleClose}
             onClick={handleClose}
           >
-            <MenuItem onClick={handleLogout}>Logout</MenuItem>
-          </Menu>
-        </>
-      ) : (
-        <>
-          <NavLink
+            {/* <MenuItem onClick={handleLogout}>Logout</MenuItem> */}
+
+            <NavLink
             to="/login"
             className={({ isActive }) =>
               `centering mr-2 ${isActive ? "isActiveStyle" : ""}`
@@ -117,8 +113,13 @@ export default function NavBar() {
           >
             Register
           </NavLink>
-        </>
-      )}
+          </Menu>
+        
+    
+      
+          
+        
+    
     </>
   );
 }

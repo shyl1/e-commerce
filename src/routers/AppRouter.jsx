@@ -16,7 +16,6 @@ import { ToastContainer } from "react-toastify";
 import UserContextProvider from "@/Context/AuthContext";
 import Register from "@/pages/Register";
 import Login from "@/pages/Login";
-import ProtectedRoute from "@/pages/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -34,43 +33,43 @@ const router = createBrowserRouter([
       },
       {
         path: 'register',
-        element: <ProtectedRoute><Register /></ProtectedRoute>,
+        element: <Register />,
       }, 
       {
         path: 'about-us',
-        element: <ProtectedRoute><AboutUs /></ProtectedRoute>,
+        element: <AboutUs />,
       }, 
       {
         path: 'contact',
-        element: <ProtectedRoute><Contact /></ProtectedRoute>,
+        element: <Contact />,
       },
       {
         path: 'blog',
-        element: <ProtectedRoute><Blog /></ProtectedRoute>,
+        element: <Blog />,
       },
       {
         path: 'checkout',
-        element: <ProtectedRoute><Checkout /></ProtectedRoute>,
+        element: <Checkout />,
       },
       {
         path: 'shop',
-        element: <ProtectedRoute><Shop /></ProtectedRoute>,
+        element: <Shop />,
       },
       {
         path: 'product/:id',
-        element: <ProtectedRoute><ProductDetails /></ProtectedRoute>,
+        element: <ProductDetails />,
       },
       {
         path: 'wishlist',
-        element: <ProtectedRoute><WishList /></ProtectedRoute>,
+        element: <WishList />,
       },
       {
         path: "search",
-        element: <ProtectedRoute><SearchResults /></ProtectedRoute>,
+        element: <SearchResults />,
       },
       {
         path: 'cart',
-        element: <ProtectedRoute><Cart /></ProtectedRoute>
+        element: <Cart />
       },
     ],
   },

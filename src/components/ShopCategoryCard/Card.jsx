@@ -15,20 +15,14 @@ export default function Card({ product, productsCount }) {
 
   const dispatch = useDispatch();
 
-<<<<<<< HEAD:src/components/Card/Card.jsx
-  const numericPrice = Number(price);
+  const numericPrice = Number(price) || 0;
   const isValidPrice = !isNaN(numericPrice) && numericPrice > 0;
-=======
+
   const navigate = useNavigate();
 
   function productPopUp() {
-  navigate(`/product/${id}`);
+    navigate(`/product/${id}`);
   }
-
-  const numericPrice = Number(price) || 0;
-  const unitDiscount = numericPrice * (discountPercentage / 100);
-  const discountedUnitPrice = numericPrice - unitDiscount;
->>>>>>> faf571583133d1367e7d2f56ef38568bcdd03dcd:src/components/ShopCategoryCard/Card.jsx
 
   const unitDiscount = isValidPrice ? numericPrice * (discountPercentage / 100) : 0;
   const discountedUnitPrice = isValidPrice ? numericPrice - unitDiscount : 0;
