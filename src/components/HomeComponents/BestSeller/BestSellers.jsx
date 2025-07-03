@@ -1,6 +1,5 @@
 import { useEffect} from "react";
 import Rating from "@mui/material/Rating";
-import { HiArrowNarrowRight } from "react-icons/hi";
 import { AD5 } from "@/assets/images";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBestSeller } from "@/store/BestSeller/bestsellerslice";
@@ -64,8 +63,8 @@ function BestSellers() {
                 />
               </div>
               <div className="h-12 ml-3">
-                <h3>{`${e.title.substring(0, 40)}`}</h3>
-                <p className="text-xs text-[#9B9BB4]">{`${e.description.substring(0, 30)}...`}</p>
+                <h3>{`${e.title.substring(0, 25)}`}</h3>
+                <p className="text-xs text-[#9B9BB4]">{`${e.description.substring(0, 45)}...`}</p>
               </div>
               <a href="#" className="text-green-600 m-3 text-xs">
                 IN STOCK
