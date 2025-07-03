@@ -13,64 +13,74 @@ import Shop from "@/pages/Shop";
 import WishList from "@/pages/WishList";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import UserContextProvider from "@/Context/AuthContext";
+import Register from "@/pages/Register";
+import Login from "@/pages/Login";
+import ProtectedRoute from "@/pages/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
-    errorElement: <Error/>, 
+    errorElement: <Error />, 
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Home />, 
       },
       {
+        path: 'login',
+        element: <Login />
+      },
+      {
+        path: 'register',
+        element: <ProtectedRoute><Register /></ProtectedRoute>,
+      }, 
+      {
         path: 'about-us',
-        element: <AboutUs />,
+        element: <ProtectedRoute><AboutUs /></ProtectedRoute>,
       }, 
       {
         path: 'contact',
-        element: <Contact />,
+        element: <ProtectedRoute><Contact /></ProtectedRoute>,
       },
       {
         path: 'blog',
-        element: <Blog />,
+        element: <ProtectedRoute><Blog /></ProtectedRoute>,
       },
       {
         path: 'checkout',
-        element: <Checkout />,
+        element: <ProtectedRoute><Checkout /></ProtectedRoute>,
       },
       {
         path: 'shop',
-        element: <Shop />,
+        element: <ProtectedRoute><Shop /></ProtectedRoute>,
       },
       {
         path: 'product/:id',
-        element: <ProductDetails />,
+        element: <ProtectedRoute><ProductDetails /></ProtectedRoute>,
       },
       {
         path: 'wishlist',
-        element: <WishList />,
+        element: <ProtectedRoute><WishList /></ProtectedRoute>,
       },
       {
         path: "search",
-        element: <SearchResults />,
+        element: <ProtectedRoute><SearchResults /></ProtectedRoute>,
       },
       {
         path: 'cart',
-        element: <Cart />
+        element: <ProtectedRoute><Cart /></ProtectedRoute>
       },
     ],
   },
 ]);
 
-
 export default function AppRouter() {
   return (
-    <>
-    <RouterProvider router={router} />
-    <ToastContainer position="top-right" autoClose={2000} />
-    </>
-
-  )
+    <UserContextProvider>
+      <RouterProvider router={router} />
+      <ToastContainer position="top-right" autoClose={2000} />
+    </UserContextProvider>
+  );
 }
