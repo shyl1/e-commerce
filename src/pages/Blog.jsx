@@ -5,159 +5,112 @@ import { GoChevronRight } from "react-icons/go"
 
 function Blog() {
   return (
-    <div className='mx-auto grid grid-cols-4 gap-4  mb-20 sm:max-w-lg md:max-w-xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl'>
-      <div className='w-full  col-span-3'>
+    <div className='mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-4 px-4 sm:px-6 md:px-8 xl:px-0 max-w-7xl mb-20'>
+
+      {/* Main Blog Section */}
+      <div className='md:col-span-2 lg:col-span-3 w-full'>
+        {/* Blog Post 1 */}
         <div>
-          <div >
-            <img src={Blog1} alt="#" className='rounded-md'/>
-          </div>
-          <div className='max-w-full my-5'>
-            <p className='text-xs font-semibold text-gray-400 leading-3 '>Grocery</p>
-            <p className='max-w-3xl font-semibold text-4xl  leading-10 mt-3 '>But I must explain to you how all this mistaken idea</p>
-            <p className='text-sm font-semibold leading-5 mt-2'><span className=' text-gray-400 mr-2 ' >Jan 13 2025</span>Sinan ISIK</p>
-            <p className=' text-base font-normal leading-7 text-slate-800 mt-6'>
-               Donec rhoncus quis diam sit amet faucibus. Vivamus pellentesque,
-               sem sed convallis ultricies, ante eros laoreet libero,<br />vitae suscipit
-               lorem turpis sit amet lectus. Quisque egestas lorem ut mauris ultrices,...
+          <img src={Blog1} alt="Blog 1" className='rounded-md w-full' />
+          <div className='mt-5'>
+            <p className='text-xs font-semibold text-gray-400'>Grocery</p>
+            <p className='text-2xl md:text-4xl font-semibold mt-3'>But I must explain to you how all this mistaken idea</p>
+            <p className='text-sm font-semibold mt-2 text-gray-600'>Jan 13 2025 <span className='ml-2'>Sinan ISIK</span></p>
+            <p className='text-base leading-7 text-slate-800 mt-4'>
+              Donec rhoncus quis diam sit amet faucibus. Vivamus pellentesque,
+              sem sed convallis ultricies, ante eros laoreet libero, vitae suscipit
+              lorem turpis sit amet lectus. Quisque egestas lorem ut mauris ultrices,...
             </p>
           </div>
         </div>
 
-        <div>
-          <div >
-            <img src={Blog2} alt="#" className='rounded-md'/>
-          </div>
-          <div className='max-w-full my-5'>
-            <p className='text-xs font-semibold text-gray-400 leading-3 '>Grocery</p>
-            <h1 className='max-w-3xl  font-semibold text-4xl  leading-10 mt-3'>The Problem With Typefaces on the Web</h1>
-            <p className='text-sm font-semibold leading-5 mt-2'><span className=' text-gray-400 mr-2 ' >Jan 13 2025</span>Sinan ISIK</p>
-            <p className=' text-base font-normal leading-7 text-slate-800 mt-6'>
-               Donec rhoncus quis diam sit amet faucibus. Vivamus pellentesque,
-               sem sed convallis ultricies, ante eros laoreet libero,<br />vitae suscipit
-               lorem turpis sit amet lectus. Quisque egestas lorem ut mauris ultrices,...
+        {/* Blog Post 2 */}
+        <div className='mt-10'>
+          <img src={Blog2} alt="Blog 2" className='rounded-md w-full' />
+          <div className='mt-5'>
+            <p className='text-xs font-semibold text-gray-400'>Grocery</p>
+            <p className='text-2xl md:text-4xl font-semibold mt-3'>The Problem With Typefaces on the Web</p>
+            <p className='text-sm font-semibold mt-2 text-gray-600'>Jan 13 2025 <span className='ml-2'>Sinan ISIK</span></p>
+            <p className='text-base leading-7 text-slate-800 mt-4'>
+              Donec rhoncus quis diam sit amet faucibus. Vivamus pellentesque,
+              sem sed convallis ultricies, ante eros laoreet libero, vitae suscipit
+              lorem turpis sit amet lectus. Quisque egestas lorem ut mauris ultrices,...
             </p>
           </div>
         </div>
-        <div className=' max-w-full h-8 flex justify-center mt-15'> 
-          <p className='h-full w-8 bg-[#35AFA0] text-white flex justify-center items-center rounded-full'>1</p>
-          <p className='h-full w-8 bg-white text-black flex justify-center items-center rounded-full'>2</p>
-          <p className='h-full w-8 bg-white text-black flex justify-center items-center rounded-full'><GoChevronRight /></p>
+
+        {/* Pagination */}
+        <div className='flex justify-center items-center gap-2 mt-10'>
+          <p className='h-8 w-8 bg-[#35AFA0] text-white flex justify-center items-center rounded-full text-sm'>1</p>
+          <p className='h-8 w-8 bg-white text-black flex justify-center items-center rounded-full text-sm'>2</p>
+          <p className='h-8 w-8 bg-white text-black flex justify-center items-center rounded-full text-sm'><GoChevronRight /></p>
         </div>
       </div>
-      
-      <div className='mx-auto w-63 flex flex-col gap-15 '>
 
+      {/* Sidebar */}
+      <div className='w-full flex flex-col gap-10'>
+
+        {/* Recent Posts */}
         <div>
-          <p className='text-sm font-medium leading-4'>RECENT POSTS</p>
-          <div className='w-full border border-[#EDEEF5] h-65 flex flex-col justify-around mt-5 rounded-md'>
+          <p className='text-sm font-medium'>RECENT POSTS</p>
+          <div className='w-full border border-[#EDEEF5] flex flex-col justify-around mt-5 rounded-md p-4 gap-4'>
 
-            <div className='mx-auto grid grid-cols-3 w-58 h-15  '>
-              <div className='relative'>
-                <img src={Blog1} alt="#"className='object-cover rounded-full size-15 ' />
-                <p className='absolute top-0 right-4  size-5.5 text-xs bg-emerald-400 text-white border-3 border-white rounded-full flex justify-center '>1</p>
-              </div>
-              <div className='col-span-2 '>
-                <p className='leading-5 ml-2 text-sm font-medium'>
-                  But I must explain to 
-                   you how all this
-                   mistaken idea
-                </p>
-              </div>
-            </div>
-
-            <div className='mx-auto grid grid-cols-3 w-58 h-15  '>
-              <div className='relative'>
-                <img src={Blog2} alt="#"className='object-cover rounded-full size-15 ' />
-                 <p className='absolute top-0 right-4  size-5.5 text-xs bg-emerald-400 text-white border-3 border-white rounded-full flex justify-center '>2</p>
-              </div>
-              <div className='col-span-2 '>
-                <p className='leading-5 ml-2 text-sm font-medium'>
-                     The Problem With
-                     Typefaces on the Web  
-                </p>
-              </div>
-            </div>
-
-            <div className='mx-auto grid grid-cols-3 w-58 h-15  '>
-              <div className='relative'>
-                <img src={AD6} alt="#"className='object-cover rounded-full size-15 ' />
-                 <p className='absolute top-0 right-4  size-5.5 text-xs bg-emerald-400 text-white border-3 border-white rounded-full flex justify-center '>3</p>
-              </div>
-              <div className='col-span-2 '>
-                <p className='leading-5 ml-2 text-sm font-medium'>
-                  English Breakfast Tea  
-                  With Tasty Donut
-                  Desserts
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      
-        <div>
-          <p className='text-sm font-medium leading-4'>SOCIAL MEDIA</p>
-          <div className='w-full h-55 flex flex-col gap-1 mt-5'>
-
-          <a href="#"> 
-             <div className='w-full h-10 bg-[#3B5998] rounded-sm flex items-center gap-4'>
-              <span className='text-white text-xs ml-4'><FaFacebookF /></span> 
-              <p className='text-white text-xs'>FACEBOOK</p>
-             </div>
-            </a>
-
-            <a href="#">
-             <div className='w-full h-10 bg-[#CC2366] rounded-sm flex items-center gap-4'>
-               <span className='text-white text-xs ml-4'><FaInstagram /> </span>
-               <p className='text-white text-xs'>INSTAGRAM</p>
-             </div>
-            </a>
-
-            <a href="#">
-             <div className='w-full h-10 bg-[#1DA1F2] rounded-sm flex items-center gap-4'>
-               <span className='text-white text-xs ml-4'><FaTwitter /></span>
-               <p className='text-white text-xs'>TWITTER</p>
-             </div>
-            </a>
-
-            <a href="#">
-            <div className='w-full h-10 bg-[#FF4500] rounded-sm flex items-center gap-4'>
-              <span className='text-white text-xs ml-4'><FaReddit /></span>
-              <p className='text-white text-xs'>REDDIT</p>
-            </div>
-            </a>
-
-            <a href="#">
-            <div className='w-full h-10 bg-[#E60023] rounded-sm flex items-center gap-4 '>
-              <span className='text-white text-xs ml-4'><FaPinterestP /></span>
-              <p className='text-white text-xs'>PINTEREST</p>
-            </div>
-            </a>
-
+            {[{ img: Blog1, title: 'But I must explain to you how all this mistaken idea', num: 1 },
+              { img: Blog2, title: 'The Problem With Typefaces on the Web', num: 2 },
+              { img: AD6, title: 'English Breakfast Tea With Tasty Donut Desserts', num: 3 }]
+              .map((post, i) => (
+                <div key={i} className='grid grid-cols-3 gap-2'>
+                  <div className='relative'>
+                    <img src={post.img} alt="#" className='object-cover rounded-full w-14 h-14' />
+                    <p className='absolute top-0 right-0 size-5 text-xs bg-emerald-400 text-white border-2 border-white rounded-full flex justify-center items-center'>{post.num}</p>
+                  </div>
+                  <div className='col-span-2'>
+                    <p className='text-sm font-medium leading-5'>{post.title}</p>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
 
+        {/* Social Media */}
         <div>
-          <p className='text-sm font-medium leading-4'>WIDGET BANNER</p>
-          <div className='w-full'>
-            <img src={AD2} alt="#" className='object-cover mt-5 rounded-sm '/>
+          <p className='text-sm font-medium'>SOCIAL MEDIA</p>
+          <div className='flex flex-col gap-2 mt-5'>
+            {[
+              { icon: <FaFacebookF />, label: 'FACEBOOK', color: '#3B5998' },
+              { icon: <FaInstagram />, label: 'INSTAGRAM', color: '#CC2366' },
+              { icon: <FaTwitter />, label: 'TWITTER', color: '#1DA1F2' },
+              { icon: <FaReddit />, label: 'REDDIT', color: '#FF4500' },
+              { icon: <FaPinterestP />, label: 'PINTEREST', color: '#E60023' },
+            ].map((item, index) => (
+              <a key={index} href="#">
+                <div className="w-full h-10 rounded-sm flex items-center gap-4" style={{ backgroundColor: item.color }}>
+                  <span className='text-white text-xs ml-4'>{item.icon}</span>
+                  <p className='text-white text-xs'>{item.label}</p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
 
+        {/* Widget Banner */}
         <div>
-           <p className='text-sm font-medium leading-4'>TAGS</p>
-           <div className='mt-5 flex flex-wrap gap-1'>
-            <a href="#"className='border border-[#EDEEF5] h-8 w-auto flex justify-center items-center '> <span className='px-2 text-sm'>ecommerce</span></a>
-            <a href="#"className='border border-[#EDEEF5] h-8 w-auto flex justify-center items-center '> <span className='px-2 text-sm'>food</span></a>
-            <a href="#"className='border border-[#EDEEF5] h-8 w-auto flex justify-center items-center '> <span className='px-2 text-sm'>grocery</span></a>
-            <a href="#"className='border border-[#EDEEF5] h-8 w-auto flex justify-center items-center '> <span className='px-2 text-sm'>klbtheme</span></a>
-            <a href="#"className='border border-[#EDEEF5] h-8 w-auto flex justify-center items-center '> <span className='px-2 text-sm'>organic</span></a>
-            <a href="#"className='border border-[#EDEEF5] h-8 w-auto flex justify-center items-center '> <span className='px-2 text-sm'>shop</span></a>
-            <a href="#"className='border border-[#EDEEF5] h-8 w-auto flex justify-center items-center '> <span className='px-2 text-sm'>shopify</span></a>
-            <a href="#"className='border border-[#EDEEF5] h-8 w-auto flex justify-center items-center '> <span className='px-2 text-sm'>store</span></a>
-           </div>
+          <p className='text-sm font-medium'>WIDGET BANNER</p>
+          <div className='w-full mt-5'>
+            <img src={AD2} alt="#" className='object-cover rounded-sm w-full' />
+          </div>
         </div>
-        
+
+        {/* Tags */}
+        <div>
+          <p className='text-sm font-medium'>TAGS</p>
+          <div className='mt-5 flex flex-wrap gap-2'>
+            {['ecommerce', 'food', 'grocery', 'klbtheme', 'organic', 'shop', 'shopify', 'store'].map((tag, i) => (
+              <a key={i} href="#" className='border border-[#EDEEF5] h-8 px-3 flex justify-center items-center text-sm rounded'>{tag}</a>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   )
