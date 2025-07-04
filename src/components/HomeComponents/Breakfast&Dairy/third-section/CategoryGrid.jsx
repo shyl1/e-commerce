@@ -1,17 +1,6 @@
 import React from 'react';
 import CategoryCard from './CategoryCard';
-
-const categories = [
-  { title: 'Beverages', count: 11, image: '/src/assets/images/task4/Beverages.png' },
-  { title: 'Biscuits & Snacks', count: 6, image: '/src/assets/images/task4/Biscuits &Snacks.png' },
-  { title: 'Breads & Bakery', count: 6, image: '/src/assets/images/task4/Breads &Bakery.png' },
-  { title: 'Breakfast & Dairy', count: 8, image: '/src/assets/images/task4/Breakfast &Dairy.png' },
-  { title: 'Frozen Foods', count: 7, image: '/src/assets/images/task4/Frozen Foods.png' },
-  { title: 'Fruits & Vegetables', count: 11, image: '/src/assets/images/task4/Fruits &Vegetables.png' },
-  { title: 'Grocery & Staples', count: 7, image: '/src/assets/images/task4/Grocery &Staples.png' },
-  { title: 'Household Needs', count: 1, image: '/src/assets/images/task4/HouseholdNeeds.png' },
-  { title: 'Meats & Seafood', count: 5, image: '/src/assets/images/task4/Meats &Seafood.png' },
-];
+import { categories } from '@/constants';
 
 export default function CategoryGrid() {
     return (

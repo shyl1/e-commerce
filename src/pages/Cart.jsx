@@ -60,7 +60,7 @@ export default function Cart() {
            //if the cart is empty show this 
           <div className="flex justify-center items-center  flex-col ">
             <p className="font-extrabold text-4xl">Your Cart is Empty.</p>
-            <button onClick={hanldeContinueShoppingRediretToHome} className="p-2 bg-yellow rounded-3xl mt-5 cursor-pointer">Go Back Shopping</button>
+            <button onClick={hanldeContinueShoppingRediretToHome} className="p-2 bg-yellow rounded-3xl mt-5 cursor-pointer bg-accent text-[var(--color-white)]">Go Back Shopping</button>
           </div>
         )
       }

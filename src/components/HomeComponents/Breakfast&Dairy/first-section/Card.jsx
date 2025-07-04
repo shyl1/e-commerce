@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const Card = ({product, discount  }) => {
+const Card = ({product  }) => {
   const { id , title , thumbnail  , price} = product;
 
   
@@ -16,11 +16,9 @@ const Card = ({product, discount  }) => {
       <div>
         <img className="w-full h-full object-cover cursor-pointer" src={thumbnail} alt={title} loading="lazy" onClick={productPopUp}/>
 
-        {discount && (
           <div className="absolute top-3 left-3 md:top-5 md:left-5 bg-[#35AFA0] text-white text-xs px-1 py:1 md:px-2 md:py-1 rounded-md">
-            {discount}
+            18%
           </div>
-        )}
       </div>
 
       <div className="space-y-2">

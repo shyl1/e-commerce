@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "@/store/HomeCategoryProducts/homecategoryslice";
-import { VerticalBorder } from "@/constants";
 import Heading from "@/components/shared/Heading";
 import SideCategory from "@/components/shared/SideCategory";
 import ViewAll from "@/components/shared/ViewAll";
@@ -92,7 +91,6 @@ const FirstPage = () => {
                 <Card
                   key={i}
                   product={product}
-                  discount={product.discount}
                 />
               ))}
             </div>
