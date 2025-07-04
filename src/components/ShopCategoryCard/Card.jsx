@@ -1,4 +1,4 @@
-import { addToCart, removeFromCart } from '@/store/cart/cartSlice';
+import { addToCart, removeFromCart, updateQuantity } from '@/store/cart/cartSlice';
 import React from 'react';
 import { CiCircleMinus, CiCirclePlus } from 'react-icons/ci';
 import { useDispatch } from 'react-redux';
@@ -30,7 +30,7 @@ export default function Card({ product, productsCount }) {
       <img
         src={thumbnail}
         alt={title}
-        className="w-full h-48 object-cover rounded-lg mb-4 cursor-pointer"
+        className="w-full h-48 object-contain rounded-lg mb-4 cursor-pointer"
         onClick={productPopUp}
       />
 
@@ -46,7 +46,12 @@ export default function Card({ product, productsCount }) {
           <button
             disabled={productsCount <= 0}
             onClick={()=> {
-              dispatch(removeFromCart(id));
+              if(productsCount > 1 ){
+                dispatch(updateQuantity({ id, quantity: productsCount - 1 }));
+              } else {
+                dispatch(removeFromCart(id));
+              }
+              
             }}
             className="text-2xl p-1 text-gray-600 hover:text-red-500"
           >
