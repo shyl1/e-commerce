@@ -8,7 +8,7 @@ export default function MainLayout() {
   const location = useLocation();
 
   // to hide footer 
-  const hideFooter = location.pathname === '/cart' || location.pathname === '/checkout';
+  const hideFooter = location.pathname === '/cart' || location.pathname === '/checkout' || location.pathname === '/wishlist';
   return (
     <>
     <section>
