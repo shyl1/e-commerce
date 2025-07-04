@@ -1,11 +1,24 @@
 
+import { useDispatch, useSelector } from "react-redux";
 import DropMenu from "./DropMenu";
 import NavBar from "./NavBar";
+import { useEffect } from "react";
+import { fetchGateoryProducts } from "@/store/categorySlice/categorySlices";
 
 
-const totalProducts = 50;
+
 
 export default function HeaderSection2() {
+
+  const {items} = useSelector(state => state.categoryProducts);
+
+  const dispatch = useDispatch();
+
+  const totalProducts = Array.isArray(items) ? items.length : 0;
+
+  useEffect(()=> {
+    dispatch(fetchGateoryProducts());
+  }, [dispatch]);
 
    // get cart and checkout path 
   const isShoppingCartOrCheckout = location.pathname === '/cart' || location.pathname === ('/checkout');

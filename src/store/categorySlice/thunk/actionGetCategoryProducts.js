@@ -7,13 +7,15 @@ const fetchGateoryProducts = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await axios.get('https://dummyjson.com/products?limit=30');
-      return res.data.products;
+      const products = res.data.products;
+      console.log(products);
+      
+      return products;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
-
 
 
 export default fetchGateoryProducts;

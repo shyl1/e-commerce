@@ -24,8 +24,6 @@ const HomeCategory = () => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-    console.log("Rendering product:", products);
-
   return (
     <section className="container min-h-full lg:min-h-screen">
       {/* Header Section */}

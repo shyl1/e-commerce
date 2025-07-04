@@ -22,8 +22,8 @@ export default function HeroSection() {
           </span>
           <span className="font-heading font-normal tracking-[-0.1px] leading-[24px] text-[16px]">from <span className="font-body font-semibold text-[36px] leading-[54px] tracking-[-0.1px] text-[var(--color-text-red)]"> $7.99</span></span>
 
-          <button className="flex items-center justify-center  text-[var(--color-text-white)] bg-accent w-[133px] h-[40px] p-2 gap-2 rounded-[30px]">Shop Now 
-            <span className="text-[var(--color-text-white)]"><RightArrow /></span>
+          <button className="flex items-center justify-center  text-[var(--color-text-white)] bg-accent w-[133px] h-[40px] p-2 gap-2 rounded-[30px]  cursor-pointer ">Shop Now 
+            <span className="text-[var(--color-text-white)] "><RightArrow /></span>
           </button>
         </div>
         
@@ -46,7 +46,7 @@ export default function HeroSection() {
             <h3 className="font-heading font-semibold text-[30px] leading-[36px] tracking-[-0.8px] text-[var(--color-text)]">only in Bacola</h3>
             <span className="font-heading font-normal text-xs leading-[18px] tracking-[-0.1px] text-[var(--color-text-light-gray)]">Bacola Weekend Discount</span>
           </div>
-          <button className="bg-btn-bg-blue text-[var(--color-text-white)] w-[120px]  h-[40px] rounded-[30px] ">Shop Now</button>
+          <button className="bg-btn-bg-blue text-[var(--color-text-white)] w-[120px]  h-[40px] rounded-[30px]  cursor-pointer  ">Shop Now</button>
         </div>
 
       </div>
@@ -63,7 +63,7 @@ export default function HeroSection() {
             <h3 className="font-heading font-semibold text-[30px] leading-[36px] tracking-[-0.8px] text-[var(--color-text)]">organic legumes</h3>
             <span className="font-heading font-normal text-xs leading-[18px] tracking-[-0.1px] text-[var(--color-text-light-gray)]">Bacola Weekend Discount</span>
           </div>
-          <button className="bg-btn-bg-blue text-[var(--color-text-white)] w-[120px]  h-[40px] rounded-[30px] ">Shop Now</button>
+          <button className="bg-btn-bg-blue text-[var(--color-text-white)] w-[120px]  h-[40px] rounded-[30px] cursor-pointer ">Shop Now</button>
         </div>
 
       </div>

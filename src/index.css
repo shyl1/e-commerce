@@ -36,6 +36,10 @@
   @apply text-[var(--color-accent)] bg-hover w-[96px] h-[40px] rounded-[40px];
 }
 
+.hovering {
+  @apply hover:text-[var(--color-accent)];
+}
+
 /* Plain CSS*/
 .container {
   max-width: 1200px;

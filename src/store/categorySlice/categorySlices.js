@@ -18,14 +18,14 @@ const productSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchGateoryProducts.pending, (state) => {
-        state.status = 'loading';
+        state.loading = 'loading';
       })
       .addCase(fetchGateoryProducts.fulfilled, (state, action) => {
-        state.status = 'succeeded';
+        state.loading = 'succeeded';
         state.items = action.payload;
       })
       .addCase(fetchGateoryProducts.rejected, (state, action) => {
-        state.status = 'failed';
+        state.loading = 'failed';
         state.error = action.payload;
       });
   }
