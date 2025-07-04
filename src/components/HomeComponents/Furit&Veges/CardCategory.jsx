@@ -1,3 +1,4 @@
+import { Stars } from "@/assets/images/category";
 import { addToCart } from "@/store/cart/cartSlice";
 import React from "react";
 import { useDispatch } from "react-redux";
@@ -40,7 +41,7 @@ const CardCategory = ({ product, discount }) => {
         <h5 className="text-xs md:text-sm text-[#00B853]"><span>{stock}</span> in stock</h5>
 
         <div className="flex items-center gap-1">
-          <img src="/src/assets/images/category/stars.png" alt="star" />
+          <img src={Stars} alt="star" />
           <div className="text-xs md:text-sm line-clamp-1">1 review</div>
         </div>
 

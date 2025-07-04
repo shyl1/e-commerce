@@ -1,3 +1,4 @@
+import { Star } from "@/assets/images/task4";
 import { useNavigate } from "react-router-dom";
 
 const Card = ({product  }) => {
@@ -29,7 +30,7 @@ const Card = ({product  }) => {
         <h5 className="text-xs md:text-sm text-[#00B853] font-semibold">IN STOCK</h5>
 
         <div className="flex items-center gap-1">
-          <img src="\src\assets\images\task4\Button - 4.00 stars.png" alt="star" />
+          <img src={Star} alt="star" />
           <div className="text-xs md:text-sm line-clamp-1">1 review</div>
         </div>
 

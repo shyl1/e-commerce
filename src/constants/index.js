@@ -1,5 +1,6 @@
 import { Delivery, Discounts, Facebook, FreshProducts, Instagram, Price, Twitter } from "@/assets/icons/svgs";
 import { AD1, AD2, AD3, AD4 } from "@/assets/images";
+import { Beverages, BiscuitsandSnacks, Bread, BreadsandBakery, BreakfastandDairy, Coffee, Egg, FrozenFoods, FruitsandVegetables, GroceryandStaples, HouseholdNeeds, MeatsansSeafood } from "@/assets/images/task4";
 
 // hero section
 export const ImgUrl = [
@@ -34,15 +35,33 @@ export  const pages = [
   ];
 
 export const categories = [
-  { title: 'Beverages', count: 11, image: '/src/assets/images/task4/Beverages.png' },
-  { title: 'Biscuits & Snacks', count: 6, image: '/src/assets/images/task4/Biscuits &Snacks.png' },
-  { title: 'Breads & Bakery', count: 6, image: '/src/assets/images/task4/Breads &Bakery.png' },
-  { title: 'Breakfast & Dairy', count: 8, image: '/src/assets/images/task4/Breakfast &Dairy.png' },
-  { title: 'Frozen Foods', count: 7, image: '/src/assets/images/task4/Frozen Foods.png' },
-  { title: 'Fruits & Vegetables', count: 11, image: '/src/assets/images/task4/Fruits &Vegetables.png' },
-  { title: 'Grocery & Staples', count: 7, image: '/src/assets/images/task4/Grocery &Staples.png' },
-  { title: 'Household Needs', count: 1, image: '/src/assets/images/task4/HouseholdNeeds.png' },
-  { title: 'Meats & Seafood', count: 5, image: '/src/assets/images/task4/Meats &Seafood.png' },
+  { title: 'Beverages', count: 11, image: Beverages },
+  { title: 'Biscuits & Snacks', count: 6, image: BiscuitsandSnacks },
+  { title: 'Breads & Bakery', count: 6, image: BreadsandBakery },
+  { title: 'Breakfast & Dairy', count: 8, image: BreakfastandDairy },
+  { title: 'Frozen Foods', count: 7, image:  FrozenFoods },
+  { title: 'Fruits & Vegetables', count: 11, image: FruitsandVegetables },
+  { title: 'Grocery & Staples', count: 7, image: GroceryandStaples },
+  { title: 'Household Needs', count: 1, image: HouseholdNeeds },
+  { title: 'Meats & Seafood', count: 5, image: MeatsansSeafood },
+];
+
+export const promos = [
+  {
+    title: "Natural Eggs",
+    subtitle: "Eat one every day",
+    image: Egg, 
+  },
+  {
+    title: "Taste the Best",
+    subtitle: "Shine the morning",
+    image: Bread, 
+  },
+  {
+    title: "Ditch the Junk",
+    subtitle: "Breakfast made better",
+    image: Coffee, 
+  },
 ];
 
 // sidebar in Shop
@@ -153,4 +172,59 @@ export const footerSocial = [
   Facebook,
   Twitter,
   Instagram,
-]
+];
+
+  // const Products = [
+  //   {
+  //     name: "American CheeseSingles",
+  //     image: "/src/assets/images/task4/product1.png",
+  //     price1:"$8.29",
+  //     price2:'$3.29',
+  //     discount:'60%'
+  //   },
+  //   {
+  //     name: "Blueberries – 1 PintPackage",
+  //     image: "/src/assets/images/task4/product3.png",
+  //     price1:"$4.49",
+  //     price2:'$3.99',
+  //     discount:'11%'
+  //   },
+  //   {
+  //     name: "Chobani CompleteVanilla Greek Yogurt",
+  //     image: "/src/assets/images/task4/product2.png",
+  //     price1:"$5.49",
+  //     price2:'$4.49',
+  //     discount:'18%'
+  //   },
+  //   {
+  //     name: "Challenge SpreadableButter",
+  //     image: "/src/assets/images/task4/product4.png",
+  //     price2:'$7.58'
+  //   },
+  //   {
+  //     name: "Fairlife Lactose-Free2% Milk",
+  //     image: "/src/assets/images/task4/product5.png",
+  //     price2:"$3.69"
+  //   },
+  //   {
+  //     name: "Nestle Original Coffee-Mate Coffee Creamer",
+  //     image: "/src/assets/images/task4/product6.png",
+  //     price1:"$13.99",
+  //     price2:'$11.99',
+  //     discount:'14%'
+  //   },
+  //   {
+  //     name: "Organic Cage-FreeGrade A Large Brown…",
+  //     image: "/src/assets/images/task4/product7.png",
+  //     price1:"$4.69",
+  //     price2:'$3.69',
+  //     discount:'21%'
+  //   },
+  //   {
+  //         name: "Vital Farms Pasture-Raised Egg Bites…",
+  //         image: "/src/assets/images/task4/product8.png",
+  //         price1:"$29.00",
+  //         price2:'$25.00',
+  //         discount:'14%'
+  //   },
+  // ];

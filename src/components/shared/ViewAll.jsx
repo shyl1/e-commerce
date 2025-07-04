@@ -1,3 +1,4 @@
+import { RightArrow } from "@/assets/icons/svgs";
 
 export default function ViewAll() {
   return (
@@ -8,11 +9,7 @@ export default function ViewAll() {
         >
           View All
         </button>
-        <img
-          className="w-4 h-4"
-          src="/src/assets/icons/svgs/icon.svg"
-          alt="Right arrow"
-        />
+        <RightArrow className="text-gray-400 "/>
     </div>
   )
 }

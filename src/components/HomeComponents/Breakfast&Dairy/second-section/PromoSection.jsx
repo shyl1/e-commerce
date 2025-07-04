@@ -1,23 +1,8 @@
 import React from 'react';
 import PromoCard from './PromoCard';
+import { promos } from '@/constants';
 
-const promos = [
-  {
-    title: "Natural Eggs",
-    subtitle: "Eat one every day",
-    image: "/src/assets/images/task4/egg.png", 
-  },
-  {
-    title: "Taste the Best",
-    subtitle: "Shine the morning",
-    image: "/src/assets/images/task4/bread.png", 
-  },
-  {
-    title: "Ditch the Junk",
-    subtitle: "Breakfast made better",
-    image: "/src/assets/images/task4/coffe.png", 
-  },
-];
+
 
 export default function PromoSection() {
   return (

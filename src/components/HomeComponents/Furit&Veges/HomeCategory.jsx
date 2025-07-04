@@ -6,6 +6,7 @@ import { fetchProducts } from "@/store/HomeCategoryProducts/homecategoryslice";
 import Heading from "@/components/shared/Heading";
 import SideCategory from "@/components/shared/SideCategory";
 import ViewAll from "@/components/shared/ViewAll";
+import { CategoryBanner } from "@/assets/images/category";
 
 const HomeCategory = () => {
 
@@ -38,7 +39,7 @@ const HomeCategory = () => {
       <div className="rounded-lg">
         <div className="flex flex-col lg:flex-row">
           {/* Left Side - Banner and Categories List */}
-          <SideCategory header={"Fruits and Vegetables"} backgroundImage={"/src/assets/images/category-banner-1.jpg.png"}/> 
+          <SideCategory header={"Fruits and Vegetables"} backgroundImage={CategoryBanner}/> 
           
           {/* Right Side - Product Cards Grid */}
           <div className="w-full md:w-[70%] h-full">

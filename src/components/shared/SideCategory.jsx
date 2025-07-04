@@ -1,3 +1,4 @@
+import { RightArrow } from '@/assets/icons/svgs'
 import { VerticalBorder } from '@/constants'
 import React from 'react'
 
@@ -7,6 +8,7 @@ export default function SideCategory({header , backgroundImage  }) {
             <div
               className=" h-[50vh] lg:h-[50vh] bg-cover bg-center flex flex-col justify-center p-6"
               style={{ backgroundImage: `url(${backgroundImage})` }}
+              loading="lazy"
             >
               <h2 className="text-sm sm:text-base lg:text-lg text-[#151720] font-medium">
                 Weekly Discounts on
@@ -34,11 +36,7 @@ export default function SideCategory({header , backgroundImage  }) {
               <div className="flex justify-start w-full px-4">
                 <button className="flex items-center text-xs text-[#000] font-semibold gap-1 hover:cursor-pointer transition-all duration-300 hover:scale-105">
                   View All
-                  <img
-                    src="/src/assets/icons/svgs/icon.svg"
-                    alt="Right arrow"
-                    className="w-3 h-3"
-                  />
+                  <RightArrow className="text-gray-400" />
                 </button>
               </div>
             </div>
