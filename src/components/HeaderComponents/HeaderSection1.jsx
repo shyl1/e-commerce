@@ -4,9 +4,7 @@ import Search from './Search';
 import CartWidget from './CartWidget';
 import { Link, NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { Avatar, IconButton, Menu, MenuItem } from "@mui/material";
-
-import { UserContext } from "@/Context/AuthContext"; // عدل حسب المسار الحقيقي
+import { Avatar, IconButton, Menu } from "@mui/material";
 
 export default function HeaderSection1() {
   const { items } = useSelector(state => state.cart);
@@ -66,8 +64,8 @@ export default function HeaderSection1() {
 
         <span> 
           {/* Avatar with Logout Menu */}
-          <IconButton onClick={handleClick} className="ml-4">
-            <Avatar sx={{ width: 32, height: 32 }} />
+          <IconButton onClick={handleClick} sx={{p:0}}>
+            <Avatar  sx={{width: {xs: 20,sm: 24,md: 32,}, height: {xs: 20,sm: 24,md: 32,}, p: 0}} />
           </IconButton>
           <Menu
             anchorEl={anchorEl}
