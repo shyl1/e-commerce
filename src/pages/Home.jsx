@@ -6,12 +6,10 @@ import PromoSection from "@/components/HomeComponents/Breakfast&Dairy/second-sec
 import CategoryGrid from "@/components/HomeComponents/Breakfast&Dairy/third-section/CategoryGrid";
 import WrapperMargin from "@/constants/WrapperMargin";
 import React from "react";
-import BreadCrumbs from "@/components/Breadcrumbs/BreadCrumbs";
 
 export default function Home() {
   return (
     <section className="my-5">
-      <BreadCrumbs/>
       <WrapperMargin>
         <HeroSection />
         <div>

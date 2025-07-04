@@ -1,14 +1,15 @@
 import React from "react";
-import SideLeftCart from "./SideLeftCart";
-import SideRightCart from "./SideRightCart";
+import SideLeftCart from "../components/checkout/SideLeftCart";
+import SideRightCart from "../components/checkout/SideRightCart";
 import WrapperMargin from "@/constants/WrapperMargin";
-import BreadCrumbs from "../Breadcrumbs/BreadCrumbs";
+import BreadCrumbs from "../components/Breadcrumbs/BreadCrumbs";
 
 const Checkout = () => {
   return (
     <div className="mt-5">
       <WrapperMargin>
-        <BreadCrumbs />
+         {/* showing breadcrumbs starting from cart to checkout */}
+          <BreadCrumbs current={'Checkout'}/>
         <div className="flex flex-col-reverse md:flex-row md:gap-4 md:items-start  w-full">
           <div className="flex-1 mb-4">
             <SideLeftCart />

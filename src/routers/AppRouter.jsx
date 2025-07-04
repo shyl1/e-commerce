@@ -2,7 +2,7 @@ import "react-toastify/dist/ReactToastify.css";
 import AboutUs from "@/pages/AboutUs";
 import Blog from "@/pages/Blog";
 import Cart from "@/pages/Cart";
-import Checkout from "@/components/checkout/Checkout";
+import Checkout from "@/pages/Checkout";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
 import Home from "@/pages/Home";

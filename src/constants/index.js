@@ -17,6 +17,22 @@ export const ImgUrl = [
   },
 ];
 
+// pages to show pagination 
+export  const pages = [
+    {
+      name: "Home",
+      path: '/',
+    },
+    {
+      name: 'Cart',
+      path:'/cart',
+    },
+    {
+      name: 'Checkout',
+      path: '/checkout',
+    }
+  ];
+
 
 // sidebar in Shop
 export const ProductCategory = [

@@ -21,6 +21,9 @@ export default function Cart() {
     
     <section className="container">
 
+      {/* showing breadcrumbs starting from cart to checkout */}
+      <BreadCrumbs current={'Cart'}/>
+
       {
         showCartDetails ? (
           <>
@@ -40,7 +43,6 @@ export default function Cart() {
                 </div>
                 <div className="mt-2 p-2">
                   <CartItems />
-                  <BreadCrumbs/>
                 </div>
 
                 <div className="flex justify-end mt-5 ">
