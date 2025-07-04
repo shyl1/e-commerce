@@ -1,5 +1,3 @@
-import React from 'react'
-import Bio from '../HeaderComponents/Bio'
 import HeaderSection1 from '../HeaderComponents/HeaderSection1'
 import HeaderSection2 from '../HeaderComponents/HeaderSection2'
 

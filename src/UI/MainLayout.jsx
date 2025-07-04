@@ -1,10 +1,14 @@
 import Warning from "@/components/HeaderComponents/Warning";
 import Footer from "@/components/shared/Footer";
 import Header from "@/components/shared/Header";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Bio from "@/components/HeaderComponents/Bio";
 
 export default function MainLayout() {
+  const location = useLocation();
+
+  // to hide footer 
+  const hideFooter = location.pathname === '/cart' || location.pathname === '/checkout';
   return (
     <>
     <section>
@@ -23,7 +27,11 @@ export default function MainLayout() {
       <section>
         <Outlet />
       </section>
-      <Footer/>
+      {
+        !hideFooter && (
+          <Footer/>
+        )
+      }
     </main>
     </>
   )
