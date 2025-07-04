@@ -17,5 +17,6 @@
 
 
 ##
- deployment link : https://basket-ecommerce.netlify.app/
+ deployment link : [basket-ecommerce.netlify.app](https://basket-ecommerce.netlify.app/)
+
 
