@@ -18,7 +18,7 @@ const HomeCategory = () => {
 // //The above error occurred in the <HomeCategory> component.
 // //React will try to recreate this component tree from scratch using the error boundary you provided, RenderErrorBoundary.
 // // error 
-// // to solve it you should garud arrays
+// // to solve it, should garud arrays
 
   useEffect(() => {
     dispatch(fetchProducts());

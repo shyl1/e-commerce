@@ -16,6 +16,8 @@ import { ToastContainer } from "react-toastify";
 import UserContextProvider from "@/Context/AuthContext";
 import Register from "@/pages/Register";
 import Login from "@/pages/Login";
+import { Suspense } from "react";
+import SkeletonLoader from "@/components/skeletonLoading/SkeletonLoader";
 
 const router = createBrowserRouter([
   {
@@ -78,7 +80,9 @@ const router = createBrowserRouter([
 export default function AppRouter() {
   return (
     <UserContextProvider>
+      <Suspense fallback={<SkeletonLoader />}>
       <RouterProvider router={router} />
+      </Suspense>
       <ToastContainer position="top-right" autoClose={2000} />
     </UserContextProvider>
   );
