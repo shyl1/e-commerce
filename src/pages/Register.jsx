@@ -62,10 +62,10 @@ export default function Register() {
     <>
     {apiError?<div className="p-4 mb-4 text-sm my-6 m-auto w-96 text-red-800 rounded-lg bg-red-50 dark:bg-lightblue-800 dark:text-red-500" role="alert">{apiError}</div> : null} 
 
-    <div className="container m-auto  py-8  ">
+    <div className="container m-auto  py-8 w-full h-screen flex items-center justify-center flex-col ">
         <h2 className='text-center  font-semibold text-green-500' >Register Now :</h2>
 
-    <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg  w-[90%] sm:w-[60%] md:w-[500px] h-auto flex flex-col justify-center">
         <div className="relative z-0 w-full mb-5 group">
             <input onBlur={formik.handleBlur} onChange={formik.handleChange}  type="name" name="name" id="name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  bottom-0  border-b-2 border-gray-300 appearance-none dark:text-dark dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
             <label htmlFor="name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transhtmlForm -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">name</label>

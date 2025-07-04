@@ -27,7 +27,7 @@ function Login() {
       if (data?.msg === 'done') {
         setSuccessMsg('Account logged successfully');
         localStorage.setItem('userToken', data.token);
-        setToken(data.token); // ✅ حطيناها قبل التنقل
+        setToken(data.token); // حطيناها قبل التنقل
         setTimeout(() => {
           navigate('/');
         }, 1500);
@@ -55,28 +55,29 @@ function Login() {
   });
 
   return (
-    <form
-      onSubmit={formik.handleSubmit}
-      className="bg-white p-8 rounded-2xl shadow-xl text-center mx-auto w-[90%] md:w-[40%] my-11"
-    >
-      <h2 className="text-2xl font-semibold mb-4">Login</h2>
+    <div className="w-full h-screen flex items-center justify-center">
+      <form
+        onSubmit={formik.handleSubmit}
+        className="bg-white p-8 rounded-2xl shadow-xl text-center w-[90%] sm:w-[60%] md:w-[500px] h-[60%] flex flex-col justify-center"
+      >
+        <h2 className="text-2xl font-semibold mb-5">Login</h2>
 
-      {successMsg && <p className="text-green-700 font-semibold my-4">{successMsg}</p>}
-      {errorMsg && <p className="text-red-600 font-semibold my-4">{errorMsg}</p>}
+        {successMsg && <p className="text-green-700 font-semibold my-4">{successMsg}</p>}
+        {errorMsg && <p className="text-red-600 font-semibold my-4">{errorMsg}</p>}
 
-      <input
-        placeholder="Email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.email}
-        name="email"
-        className="w-full p-2 rounded mb-4 border border-gray-300"
-      />
-      {formik.errors.email && formik.touched.email && (
-        <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50">
-          <span className="font-medium">{formik.errors.email}</span>
-        </div>
-      )}
+        <input
+          placeholder="Email"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.email}
+          name="email"
+          className="w-full p-2 rounded mb-4 border border-gray-300"
+        />
+        {formik.errors.email && formik.touched.email && (
+          <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50">
+            <span className="font-medium">{formik.errors.email}</span>
+          </div>
+        )}
 
       <input
         type="password"
@@ -101,13 +102,14 @@ function Login() {
         {isloading ? <i className="fas fa-spinner fa-spin"></i> : "Login"}
       </button>
 
-      <p className="mt-4 flex justify-between">
+      <p className="mt-4 flex justify-between  text-xs md:text-base">
         Don’t have an account?
-        <Link to="/register" className="text-green-500 font-semibold hover:text-green-600">
-          Register now...
+        <Link to="/register" className="text-green-500 font-semibold hover:text-green-600 text-xs md:text-base">
+          Register now
         </Link>
       </p>
     </form>
+  </div>
   );
 }
 

@@ -28,14 +28,6 @@ const router = createBrowserRouter([
         element: <Home />, 
       },
       {
-        path: 'login',
-        element: <Login />
-      },
-      {
-        path: 'register',
-        element: <Register />,
-      }, 
-      {
         path: 'about-us',
         element: <AboutUs />,
       }, 
@@ -73,6 +65,14 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: 'login',
+    element: <Login />
+  },
+  {
+    path: 'register',
+    element: <Register />,
+  }, 
 ]);
 
 export default function AppRouter() {
