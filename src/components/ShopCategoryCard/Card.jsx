@@ -15,14 +15,8 @@ export default function Card({ product, productsCount }) {
 
   const dispatch = useDispatch();
 
-  const numericPrice = Number(price) || 0;
+  const numericPrice = Number(price);
   const isValidPrice = !isNaN(numericPrice) && numericPrice > 0;
-
-  const navigate = useNavigate();
-
-  function productPopUp() {
-    navigate(`/product/${id}`);
-  }
 
   const unitDiscount = isValidPrice ? numericPrice * (discountPercentage / 100) : 0;
   const discountedUnitPrice = isValidPrice ? numericPrice - unitDiscount : 0;
