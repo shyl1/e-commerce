@@ -24,11 +24,11 @@ export default function DropMenu({totalProducts}) {
       {/* drop down menu  */}
       {
         isOpen && (
-          <ul className='w-[350px] lg:w-[600px] h-[300px] bg-border-gray/80 backdrop-blur-sm absolute top-[70px] left-0 p-6 flex flex-col  shadow-xl rounded-md transition-all duration-300 z-50 text-[var(--color-text-black)] text-xs gap-3 font-bold flex-wrap'>
-            <Link to={'/'} className='hovering'>Home</Link>
-            <Link to={'/shop'} className='hovering'>Shop</Link>
-            <Link to={'/blog'} className='hovering'>Blog</Link>
-            <Link to={'/contact'} className='hovering'>Contact</Link>
+          <ul role="menu" className='w-[350px] lg:w-[600px] h-auto bg-border-gray/80 backdrop-blur-sm absolute top-[70px] left-0 p-6 flex flex-col  shadow-xl rounded-md transition-all duration-300 z-50 text-[var(--color-text-black)] text-xs gap-3 font-bold flex-wrap'>
+            <Link to={'/'} className='hovering text-base'>Home</Link>
+            <Link to={'/shop'} className='hovering text-base'>Shop</Link>
+            <Link to={'/blog'} className='hovering text-base'>Blog</Link>
+            <Link to={'/contact'} className='hovering text-base'>Contact</Link>
           </ul>
         )
       }
