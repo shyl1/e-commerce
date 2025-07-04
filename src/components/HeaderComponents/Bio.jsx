@@ -1,4 +1,4 @@
-import { ArrowDown, DropDown, Secure } from "@/assets/icons/svgs";
+import { DropDown, Secure } from "@/assets/icons/svgs";
 import { Link } from "react-router-dom";
 
 
