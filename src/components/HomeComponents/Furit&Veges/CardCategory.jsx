@@ -21,7 +21,7 @@ const CardCategory = ({ product, discount }) => {
     <div className="relative p-4 h-full flex flex-col justify-between border-2 border-gray-200">
       {/* Product Image */}
       <div>
-        <img className="w-full h-full object-cover cursor-pointer" src={thumbnail} alt={title} onClick={productPopUp}/>
+        <img className="w-full h-full object-cover cursor-pointer" loading="lazy" src={thumbnail} alt={title} onClick={productPopUp}/>
 
         {/* Discount Badge */}
         {discount && (

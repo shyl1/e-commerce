@@ -1,4 +1,4 @@
-import { removeFromCart, updateQuantity } from "@/store/cart/cartSlice";
+import { addToCart, removeFromCart, updateQuantity } from "@/store/cart/cartSlice";
 
 export default function QuantityControls({ cartProduct, product, dispatch, toast }) {
   return (

@@ -45,6 +45,7 @@ export default function RelatedProductsSlider({ relatedProducts }) {
                   src={item.thumbnail}
                   className="w-full h-full object-contain p-3"
                   alt={item.title}
+                  loading="lazy"
                 />
                 <button
                   onClick={(e) => {

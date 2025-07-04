@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section className='container grid grid-cols-12 gap-4'>
 
       {/* alpro */}
-      <div 
+      <div  loading="lazy"
       style={{backgroundImage: `url(${ImgUrl[0].img})`}}
       className={`col-span-12 lg:col-span-8 row-span-8 bg-center bg-cover w-full h-[506px] rounded-[7px] p-6`}>
 
@@ -30,12 +30,13 @@ export default function HeroSection() {
       </div>
 
       {/* Starbucks */}
-      <div style={{backgroundImage: `url(${ImgUrl[1].img})`}}
+      <div loading="lazy" style={{backgroundImage: `url(${ImgUrl[1].img})`}}
       className={`hidden lg:flex col-span-4 row-span-8 bg-center bg-cover w-full h-[506px] rounded-[7px] p-6`}
       ></div>
 
       {/* Bread */}
       <div 
+        loading="lazy"
         style={{backgroundImage: `url(${ImgUrl[2].img})`}}
         className={`hidden col-span-6 row-span-5 bg-center bg-cover w-full h-[260px] rounded-[7px] p-6 lg:flex justify-end items-center`}
       >
@@ -54,6 +55,7 @@ export default function HeroSection() {
       {/* lentils */}
       <div 
         style={{backgroundImage: `url(${ImgUrl[3].img})`}}
+        loading="lazy"
         className={`hidden col-span-6 row-span-5 bg-center bg-cover w-full h-[260px] rounded-[7px] p-6 lg:flex justify-end items-center`}
       >
          {/* content */}

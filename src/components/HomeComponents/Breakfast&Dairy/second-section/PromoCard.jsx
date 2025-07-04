@@ -7,6 +7,7 @@ export default function PromoCard({ image, title, subtitle }) {
         src={image}
         alt={title}
         className="absolute  w-full h-full object-cover"
+        loading="lazy"
       />
       <div className="relative z-10   p-4 m-4 mt-4 rounded-sm">
         <p className="text-green-600 text-sm font-semibold mb-1 mt-4">

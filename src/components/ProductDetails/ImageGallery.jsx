@@ -11,12 +11,13 @@ export default function ImageGallery({ images, mainImage, setMainImage, title })
               mainImage === img ? "border-[#35AFA0]" : "border-[#E7ECF0] hover:border-[#80D8C7]"}`
             }
             alt={`Thumbnail ${i + 1}`}
+            loading="lazy"
           />
         ))}
       </div>
 
       <div className="flex justify-center items-center border rounded-md border-[#E7ECF0] h-[600px] px-6">
-        <img src={mainImage} className="w-full h-full object-contain max-w-[400px] md:max-w-full p-5" alt={title} />
+        <img src={mainImage} className="w-full h-full object-contain max-w-[400px] md:max-w-full p-5" alt={title}  loading="lazy"/>
       </div>
     </>
   );

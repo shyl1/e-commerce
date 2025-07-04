@@ -9,6 +9,7 @@ const CategoryCard = ({ image, title, count, isFirst}) => {
     }`}
     >
       <img
+        loading="lazy"
         src={image}
         alt={title}
         className={`rounded object-cover flex-shrink-0 

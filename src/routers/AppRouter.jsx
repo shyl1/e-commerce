@@ -1,16 +1,9 @@
 import "react-toastify/dist/ReactToastify.css";
 import AboutUs from "@/pages/AboutUs";
 import Blog from "@/pages/Blog";
-import Cart from "@/pages/Cart";
-import Checkout from "@/pages/Checkout";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
-import Home from "@/pages/Home";
 import MainLayout from "@/UI/MainLayout";
-import ProductDetails from "@/pages/ProductDetails";
-import SearchResults from "@/pages/SearchResults";
-import Shop from "@/pages/Shop";
-import WishList from "@/pages/WishList";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import UserContextProvider from "@/Context/AuthContext";
@@ -18,6 +11,17 @@ import Register from "@/pages/Register";
 import Login from "@/pages/Login";
 import { Suspense } from "react";
 import SkeletonLoader from "@/components/skeletonLoading/SkeletonLoader";
+
+
+import {
+  Home,
+  Shop,
+  SearchResults,
+  Cart,
+  Checkout,
+  ProductDetails,
+  WishList,
+} from "@components/lazyload/index";
 
 const router = createBrowserRouter([
   {

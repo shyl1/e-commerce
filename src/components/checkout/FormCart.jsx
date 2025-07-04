@@ -103,6 +103,7 @@ const FormCart = () => {
               className="w-12"
               src="/src/assets/images/Checkout/Group.png"
               alt="visa"
+              loading="lazy"
             />
             <h1 className="text-sm text-[#707070]">
               This store can't accept payments right now.

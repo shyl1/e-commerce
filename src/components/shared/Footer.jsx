@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
         </div>
         <img src={Coupon} alt="Banner"
-          className="absolute bottom-0 right-4 sm:right-10 md:right-20 lg:right-40 xl:right-60 2xl:right-80 w-24 sm:w-36 md:w-60 lg:w-72 xl:w-80 2xl:w-[26rem] hidden md:block"
+          className="absolute bottom-0 right-4 sm:right-10 md:right-20 lg:right-40 xl:right-60 2xl:right-80 w-24 sm:w-36 md:w-60 lg:w-72 xl:w-80 2xl:w-[26rem] hidden md:block" loading="lazy"
         />
       </div>
 
@@ -89,8 +89,8 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-2 items-center">
-            <img src={GooglePlay} className="h-10 w-auto" />
-            <img src={AppStore} className="h-10 w-auto" />
+            <img src={GooglePlay} className="h-10 w-auto" loading="lazy" />
+            <img src={AppStore} className="h-10 w-auto" loading="lazy"/>
           </div>
 
           <div className="flex gap-2 items-center" >
@@ -119,7 +119,7 @@ const Footer = () => {
             <a href="#">Terms and Conditions</a>
             <a href="#">Cookie</a>
           </div>
-          <img src={Payments} className="h-6" alt="Payment Methods" />
+          <img src={Payments} className="h-6" alt="Payment Methods" loading="lazy"/>
         </div>
       </div>
     </footer>

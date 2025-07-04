@@ -23,7 +23,7 @@ export default function CartItems() {
           <div key={item.id} className="sm:grid sm:grid-cols-[3fr_1fr_1fr_1fr_1fr] gap-3 p-2 text-base rounded flex flex-col border-b">
           {/* Image & Title */}
           <div className="gap-4 items-center hidden sm:flex">
-            <img src={item.thumbnail} alt={item.title} className="w-[100px] h-28 object-contain" />
+            <img src={item.thumbnail} alt={item.title} className="w-[100px] h-28 object-contain" loading="lazy"/>
             <p className="text-sm font-semibold">{item.title}</p>
           </div>
 
