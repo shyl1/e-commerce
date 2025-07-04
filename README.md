@@ -1,12 +1,9 @@
 # e-commerce
 
 # installing dependencies
-
 1- npm install
-
 ##
 2- react-router-dom -> npm i react-router-dom
-
 ##
 3- tailwind css v4  ->  npm install tailwindcss @tailwindcss/vite
 ##
@@ -15,10 +12,10 @@
  path alias with javascript -> npm install --save-dev @types/node
  ##
  redux toolkit -> npm install @reduxjs/toolkit react-redux
-
 ##
-
 4- axios
 
 
+##
+ deployment link : https://basket-ecommerce.netlify.app/
 
