@@ -8,7 +8,7 @@ import Card from '@/components/ShopCategoryCard/Card';
 export default function Shop() {
   const dispatch = useDispatch();
 
-  const {items , status , error , } = useSelector((state) => state.categoryProducts);
+  const {items , loading , error , } = useSelector((state) => state.categoryProducts);
 
   const { items: cartItems } = useSelector((state) => state.cart);
 
@@ -64,15 +64,15 @@ export default function Shop() {
           </div>
 
           {/* Product Grid */}
-          {status === 'loading' && (
+          {loading === 'loading' && (
             <p className="text-gray-500 text-center">Loading products...</p>
           )}
 
-          {status === 'failed' && (
+          {loading === 'failed' && (
             <p className="text-red-500 text-center">Error: {error || 'Something went wrong'}</p>
           )}
 
-          {status === 'succeeded' && (
+          {loading === 'succeeded' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {filteredProducts.map((product) => {
                 const cartProduct = cartItems.find((item) => item.id === product.id);
