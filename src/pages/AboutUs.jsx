@@ -4,8 +4,7 @@ import manImg from "../assets/images/man.png";
 export default function AboutUs() {
   return (
     <>
-     <div className="about">
-     
+    <section>
       <div
         className="about-header  h-[60vh] bg-cover bg-center flex flex-col justify-center items-center text-white text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold">About for Bacola</h1>
@@ -13,14 +12,14 @@ export default function AboutUs() {
       </div>
 
     
-      <div className="max-w-6xl mx-auto py-12 px-5 space-y-12 text-[#202435]">
+      <div className="max-w-6xl mx-auto p-5 lg:py-12 lg:px-5 space-y-12 text-[#202435]">
         <p className="text-justify text-sm leading-6">
           In nec purus eget neque accumsan finibus. Duis condimentum elit ut libero commodo iaculis. Donec augue diam, tristique et ultricies nec, consectetur quis enim. Nullam id
-rutrum ex. Aliquam a lectus id lacus rhoncus dapibus non ac justo. Vivamus lacinia vestibulum metus in dapibus. Vestibulum sit amet sollicitudin enim. Ut id interdum turpis.
-Curabitur porta auctor quam, pretium facilisis nisl. Pellentesque efficitur elit ante, vel vulputate tortor blandit nec.
+          rutrum ex. Aliquam a lectus id lacus rhoncus dapibus non ac justo. Vivamus lacinia vestibulum metus in dapibus. Vestibulum sit amet sollicitudin enim. Ut id interdum turpis.
+          Curabitur porta auctor quam, pretium facilisis nisl. Pellentesque efficitur elit ante, vel vulputate tortor blandit nec.
         </p>
 
-        <div className="px-20">
+        <div className="lg:px-20">
           <h2 className="text-3xl font-semibold max-w-xl mb-9 leading-9 ">
             Quisque erat urna, congue et libero in
             eleifend euismod velit.
@@ -42,12 +41,12 @@ Curabitur porta auctor quam, pretium facilisis nisl. Pellentesque efficitur elit
       alt="CEO"
       className="w-full shadow"
     />
-    <div className="my-5">
+    <div className="my-3">
       <p className="mb-6 leading-6 text-base">Rachel Leonard - Bacola CEO</p>
       <h2 className="text-3xl font-semibold mb-6 ledaing-6">
         Duis convallis luctus pretium. Pellentesque habitant morbi
       </h2>
-      <div className="p-6">
+      <div className="lg:p-6">
         <p className=" mb-10 text-justify leading-6 text-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse
@@ -71,7 +70,6 @@ Curabitur porta auctor quam, pretium facilisis nisl. Pellentesque efficitur elit
     </div>
   </div>
 
- 
 <div
   className="
     bg-white rounded-[7px]
@@ -100,7 +98,7 @@ rutrum ex. Aliquam a lectus id lacus rhoncus dapibus non ac justo. Vivamus lacin
 Curabitur porta auctor quam, pretium facilisis nisl. Pellentesque efficitur elit ante, vel vulputate tortor blandit nec.
         </p>
       </div>
-    </div>
+    </section>
     </>
   )
 }

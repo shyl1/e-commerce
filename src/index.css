@@ -76,9 +76,11 @@
   stroke-dashoffset: -262.2723388671875;
   stroke: rgb(34, 197, 94);
 }
+
 .about,.wishlist,.popup{
   font-family: var(--font-heading);
 }
+
 .about-header{
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../src/assets/images/about.jpg);
     background-position: center;
