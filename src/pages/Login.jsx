@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
 import { useContext, useState } from "react";
-import { UserContext } from "@/Context/AuthContext";
+import { UserContext } from "../Context/AuthContext";
 
 function Login() {
   const { setToken } = useContext(UserContext);
@@ -19,29 +19,29 @@ function Login() {
     setErrorMsg('');
     try {
       const { data } = await axios.post(
-        `https://note-sigma-black.vercel.app/api/v1/users/signIn`,
+        'https://ecommerce.routemisr.com/api/v1/auth/signin',
         values
       );
       setIsLoading(false);
 
-      if (data?.msg === 'done') {
-        setSuccessMsg('Account logged successfully');
-        localStorage.setItem('userToken', data.token);
-        setToken(data.token); // حطيناها قبل التنقل
+      if (data?.message === 'success') {
+        setSuccessMsg('Account logged in successfully');
+        localStorage.setItem('token', data.token);
+        setToken(data.token);
         setTimeout(() => {
           navigate('/');
         }, 1500);
       }
     } catch (err) {
       setIsLoading(false);
-      setErrorMsg(err.response?.data?.msg || 'Something went wrong');
+      setErrorMsg(err.response?.data?.message || 'Something went wrong');
     }
   };
 
   const validation = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("Email is required"),
     password: Yup.string()
-      .matches(/^[A-Za-z0-9]{6,20}$/, "Password must be 6-20 characters")
+      .matches(/^[A-Z][a-z0-9]{5,10}$/, "Password must start with a capital letter and be 6-10 characters")
       .required("Password is required"),
   });
 
@@ -74,43 +74,43 @@ function Login() {
           className="w-full p-2 rounded mb-4 border border-gray-300"
         />
         {formik.errors.email && formik.touched.email && (
-          <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50">
-            <span className="font-medium">{formik.errors.email}</span>
-          </div>
+          <Alert msg={formik.errors.email} />
         )}
 
-      <input
-        type="password"
-        placeholder="Password"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.password}
-        name="password"
-        className="w-full p-2 rounded mb-4 border border-gray-300"
-      />
-      {formik.errors.password && formik.touched.password && (
-        <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50">
-          <span className="font-medium">{formik.errors.password}</span>
-        </div>
-      )}
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.password}
+          name="password"
+          className="w-full p-2 rounded mb-4 border border-gray-300"
+        />
+        {formik.errors.password && formik.touched.password && (
+          <Alert msg={formik.errors.password} />
+        )}
 
-      <button
-        type="submit"
-        disabled={isloading}
-        className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition"
-      >
-        {isloading ? <i className="fas fa-spinner fa-spin"></i> : "Login"}
-      </button>
+        <button
+          type="submit"
+          disabled={isloading}
+          className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition"
+        >
+          {isloading ? <i className="fas fa-spinner fa-spin"></i> : "Login"}
+        </button>
 
-      <p className="mt-4 flex justify-between  text-xs md:text-base">
-        Don’t have an account?
-        <Link to="/register" className="text-green-500 font-semibold hover:text-green-600 text-xs md:text-base">
-          Register now
-        </Link>
-      </p>
-    </form>
-  </div>
+        <p className="mt-4 flex justify-between text-xs md:text-base">
+          Don’t have an account?
+          <Link to="/register" className="text-green-500 font-semibold hover:text-green-600 ml-1">
+            Register now
+          </Link>
+        </p>
+      </form>
+    </div>
   );
+}
+
+function Alert({ msg }) {
+  return <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50">{msg}</div>;
 }
 
 export default Login;
